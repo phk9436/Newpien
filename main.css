@@ -41,6 +41,10 @@ body {
   position: relative;
 }
 
+section:not(.section01) {
+  background-color: #fff;
+}
+
 .section01 {
   background-color: #000;
   width: 100vw;
@@ -161,7 +165,6 @@ body {
 }
 
 .section02 {
-  background-color: #fff;
   padding: 60px 0 40px;
 }
 
@@ -226,9 +229,8 @@ p.desc span.green {
 }
 
 .section03 {
-  padding-top: 513px;
+  padding-top: 200px;
   padding-bottom: 360px;
-  background-color: #fff;
 }
 
 .section03 .items {
@@ -236,6 +238,40 @@ p.desc span.green {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   width: 100%;
+}
+
+.section03 .itemCont {
+  transition: 0.5s;
+  transform: scale(0);
+}
+
+.section03 .itemCont.itemCont1 {
+  transition-delay: 0;
+}
+.section03 .itemCont.itemCont2 {
+  transition-delay: 0.2s;
+}
+.section03 .itemCont.itemCont3 {
+  transition-delay: 0.4s;
+}
+.section03 .itemCont.itemCont4 {
+  transition-delay: 0.6s;
+}
+.section03 .itemCont.itemCont5 {
+  transition-delay: 0.3s;
+}
+.section03 .itemCont.itemCont6 {
+  transition-delay: 0.5s;
+}
+.section03 .itemCont.itemCont7 {
+  transition-delay: 0.1s;
+}
+.section03 .itemCont.itemCont8 {
+  transition-delay: 0.8s;
+}
+
+.section03 .items.on .itemCont {
+  transform: scale(1);
 }
 
 .section03 .item {
@@ -333,7 +369,10 @@ p.desc span.green {
   color: #fff;
 }
 
-
 .section03 .item:hover .dot {
   top: 55px;
+}
+
+.sectionInter {
+  height: 313px;
 }

@@ -23,7 +23,6 @@ window.addEventListener("load", () => {
     const newW = newH * ratio;
     const maxWgap = 1440 - 860;
     const wgap = (newW - oldW)/maxWgap;
-    console.log(wgap)
     const kneeOff = document.querySelector(".kneeOff");
     const kneeOn = document.querySelector(".kneeOn");
     if(newW > 1440) {
@@ -39,6 +38,11 @@ window.addEventListener("load", () => {
     }
   }
 
+  const scrollCheck = (el) => {
+    const elementTop = el.getBoundingClientRect().top + window.scrollY;
+    return window.scrollY >= elementTop;
+  }
+
   window.addEventListener("scroll", (e) => {
 
     //섹션1 이벤트
@@ -51,6 +55,10 @@ window.addEventListener("load", () => {
     //섹션2 이벤트
     //console.log(window.scrollY + window.innerHeight,sect2Bottom , isScrollOver())
     isScrollOver(document.querySelector(".section02")) && resizeKnee();
+
+    //섹션3 이벤트
+    const sect3Item = document.querySelector(".section03 .items");
+    scrollCheck(document.querySelector(".section03")) ? sect3Item.classList.add("on") : sect3Item.classList.remove("on");
   });
 });
 
