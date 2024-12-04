@@ -22,10 +22,10 @@ window.addEventListener("load", () => {
     const oldW = 860;
     const newW = newH * ratio;
     const maxWgap = 1440 - 860;
-    const wgap = (newW - oldW)/maxWgap;
+    const wgap = (newW - oldW) / maxWgap;
     const kneeOff = document.querySelector(".kneeOff");
     const kneeOn = document.querySelector(".kneeOn");
-    if(newW > 1440) {
+    if (newW > 1440) {
       knee.style.width = '1440px';
       knee.style.height = `${1440 / ratio}px`;
       knee.classList.add("on");
@@ -43,6 +43,46 @@ window.addEventListener("load", () => {
     return window.scrollY >= elementTop;
   }
 
+  const swiperSetting = {
+    slidesPerView: 1,
+    // 무한 루프
+    autoplay: true,
+    loop: true,
+    loopAdditionalSlides: 1,
+    //페이지를 로딩한 직후 작동
+    observer: true,
+    observeParents: true,
+    // loopedSlides: 1,
+    // pagination: {
+    //   el: ".swiperBtnWrapper",
+    //   clickable: true,
+    // },
+    navigation: {   // 버튼
+      nextEl: ".swiperArrowNext",
+      prevEl: ".swiperArrowPrev",
+    },
+  }
+
+  const setSwiper = () => {
+    const swiperDots = document.querySelectorAll(".swiper-dots li");
+    const swiper = new Swiper(".swiper", {
+      ...swiperSetting,
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      scrollbar: { el: ".swiper-scroll" },
+      on: {
+        slideChange: function () {
+          const { realIndex } = this;
+          swiperDots.forEach((e) => e.classList.remove("active"));
+          swiperDots[realIndex].classList.add("active");
+        }
+      },
+    });
+
+    swiperDots.forEach((e, i) => e.addEventListener("click", () => swiper.slideTo(i)));
+  }
+  setSwiper();
+
   window.addEventListener("scroll", (e) => {
 
     //섹션1 이벤트
@@ -59,7 +99,9 @@ window.addEventListener("load", () => {
     //섹션3 이벤트
     const sect3Item = document.querySelector(".section03 .items");
     scrollCheck(document.querySelector(".section03")) ? sect3Item.classList.add("on") : sect3Item.classList.remove("on");
+
   });
+
 });
 
 document.addEventListener("DOMContentLoaded", () => {

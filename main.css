@@ -27,6 +27,7 @@ em {
 body {
   font-family: "Noto Sans KR", sans-serif;
   color: #101820;
+  width: 100vw;
   overflow-y: overlay;
   overflow-x: hidden;
 }
@@ -241,7 +242,7 @@ p.desc span.green {
 }
 
 .section03 .itemCont {
-  transition: 0.5s;
+  transition: 0.3s;
   transform: scale(0);
 }
 
@@ -375,4 +376,163 @@ p.desc span.green {
 
 .sectionInter {
   height: 313px;
+}
+
+.slideArea {
+  display: flex;
+  height: 550px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.slideArea::before {
+  content: '';
+  display: block;
+  width: 100vw;
+  height: 364px;
+  background-color: #08482b;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.slideLeft, .slideRight {
+  flex: 1;
+}
+
+.slideLeft, .slideRight , .slideWrapper {
+  z-index: 1;
+  position: relative;
+}
+
+.slideLeft {
+  background-color: transparent;
+}
+
+.slideWrapper {
+  width: 1520px;
+  padding: 0 40px;
+  background: transparent url("./images/slideBg.png") 100%;
+  position: relative;
+}
+
+.slideRight {
+  background-color: #ececec;
+}
+
+.slideWrapper .swiper {
+  width: 1000px;
+  height: 100%;
+  float: right;
+}
+
+.swiper-slide, .swiper-wrapper {
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 100px;
+  padding: 90px 0;
+}
+
+.slideTitle h4 {
+  margin-top: 20px;
+  font-size: 48px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.slideTitle h4 em {
+  font-size: 64px;
+  color: #13AE67;
+}
+
+.slideContent {
+  overflow-y: auto;
+}
+
+.slideContent::-webkit-scrollbar {
+  width: 4px;
+}
+
+.slideContent::-webkit-scrollbar-thumb {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.slideContent p {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: -0.05em;
+}
+
+.slideContent span {
+  font-size: 13px;
+}
+
+.swiper-scroll {
+  width: 300px;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 141px;
+  right: 920px;
+  background-color: #fff;
+}
+
+.swiper-scroll .swiper-scrollbar-drag {
+  background-color: #000;
+}
+
+.swiperArrowPrev, .swiperArrowNext {
+  width: 23px;
+  height: 36px;
+  bottom: 125px;
+  background: url("./images/slidearrow.png") no-repeat center/contain;
+  position: absolute;
+  z-index: 9;
+}
+
+.swiperArrowPrev {
+  right: 840px;
+}
+
+.swiperArrowNext {
+  right: 770px;
+  transform: rotate(180deg);
+}
+
+.swiper-dots {
+  margin-top: 84px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.swiper-dots li {
+  padding: 18px;
+  font-size: 18px;
+  line-height: 28px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  transition: .5s;
+}
+
+.swiper-dots li:hover {
+  background-color: #e3e3e3;
+}
+
+.swiper-dots li:not(.active) {
+  cursor: pointer;
+}
+
+.swiper-dots li.active {
+  background-color: #13AE67;
+  color: #fff;
+  font-weight: 700;
 }
