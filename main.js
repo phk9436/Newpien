@@ -21,13 +21,14 @@ window.addEventListener("load", () => {
     const newH = 470 + isScrollOver();
     const oldW = 860;
     const newW = newH * ratio;
-    const maxWgap = 1440 - 860;
+    const maxW = 1200;
+    const maxWgap = maxW - oldW;
     const wgap = (newW - oldW) / maxWgap;
     const kneeOff = document.querySelector(".kneeOff");
     const kneeOn = document.querySelector(".kneeOn");
-    if (newW > 1440) {
-      knee.style.width = '1440px';
-      knee.style.height = `${1440 / ratio}px`;
+    if (newW > maxW) {
+      knee.style.width = `${maxW}px`;
+      knee.style.height = `${maxW / ratio}px`;
       knee.classList.add("on");
     } else {
       knee.style.width = `${newW}px`;

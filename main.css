@@ -220,9 +220,13 @@ p.desc span.green {
 .itemcase {
   position: absolute;
   right: 0;
-  bottom: -318px;
+  bottom: -218px;
   opacity: 0;
   transition: .5s;
+}
+
+.itemcase img {
+  width: 720px;
 }
 
 .kneeItem.on .itemcase {
@@ -230,7 +234,7 @@ p.desc span.green {
 }
 
 .section03 {
-  padding-top: 200px;
+  padding-top: 300px;
   padding-bottom: 360px;
 }
 
@@ -308,7 +312,7 @@ p.desc span.green {
 }
 
 .section03 .title {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .section03 .desc {
@@ -375,7 +379,7 @@ p.desc span.green {
 }
 
 .sectionInter {
-  height: 313px;
+  height: 213px;
 }
 
 .slideArea {
