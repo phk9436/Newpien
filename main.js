@@ -30,6 +30,8 @@ window.addEventListener("load", () => {
       knee.style.width = `${maxW}px`;
       knee.style.height = `${maxW / ratio}px`;
       knee.classList.add("on");
+      kneeOff.style.opacity = 0;
+      kneeOn.style.opacity = 1;
     } else {
       knee.style.width = `${newW}px`;
       knee.style.height = `${newH}px`;
@@ -94,8 +96,7 @@ window.addEventListener("load", () => {
     itemWrapper.style.opacity = isScroll > 0.7 ? 0 : 1;
 
     //섹션2 이벤트
-    //console.log(window.scrollY + window.innerHeight,sect2Bottom , isScrollOver())
-    isScrollOver(document.querySelector(".section02")) && resizeKnee();
+    resizeKnee();
 
     //섹션3 이벤트
     const sect3Item = document.querySelector(".section03 .items");

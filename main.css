@@ -197,6 +197,7 @@ p.desc span.green {
   width: 860px;
   height: 470px;
   position: relative;
+  transition: .2s;
 }
 
 .kneeItem div:not(:last-child) {
