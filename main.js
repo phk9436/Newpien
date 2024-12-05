@@ -86,6 +86,19 @@ window.addEventListener("load", () => {
   }
   setSwiper();
 
+  const circleWrapper = document.querySelector(".circleWrapper");
+  const circle = document.querySelectorAll(".circleCont");
+  circle.forEach((e) => {
+    e.addEventListener("mouseover", () => {
+      circleWrapper.style.animationPlayState = 'paused';
+      circle.forEach((e) => e.querySelector(".circle").style.animationPlayState = 'paused');
+    });
+    e.addEventListener("mouseout", () => {
+      circleWrapper.style.animationPlayState = 'running';
+      circle.forEach((e) => e.querySelector(".circle").style.animationPlayState = 'running');
+    });
+  });
+
   window.addEventListener("scroll", (e) => {
 
     //섹션1 이벤트
