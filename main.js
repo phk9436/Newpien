@@ -76,16 +76,14 @@ window.addEventListener("load", () => {
       on: {
         slideChange: function () {
           const { realIndex } = this;
+          console.log(realIndex)
           swiperDots.forEach((e) => e.classList.remove("active"));
           swiperDots[realIndex].classList.add("active");
         }
       },
     });
 
-    swiperDots.forEach((e, i) => e.addEventListener("click", () => {
-      console.log(i)
-      swiper.slideTo(i)
-    }));
+    swiperDots.forEach((e, i) => e.addEventListener("click", () => swiper.slideToLoop(i)));
   }
   setSwiper();
 
