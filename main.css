@@ -828,3 +828,67 @@ ul.family li:not(:nth-child(1)) {
 ul.family li:not(:nth-child(1))::after {
   transform: translateY(-50%) rotate(-90deg);
 }
+
+nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+nav li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+}
+
+nav li:not(.on) {
+  cursor: pointer;
+}
+
+nav li a {
+  display: block;
+  width: 14px;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+nav li a::after {
+  content: '';
+  display: block;
+  width: 10px;
+  aspect-ratio: 1;
+  background-color: #ababab;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .2s;
+}
+
+nav li:hover a::after {
+  width: 14px;
+}
+
+nav li:hover p {
+  opacity: 1;
+}
+
+nav p {
+  font-size: 14px;
+  text-align: right;
+  color: #ababab;
+  white-space: nowrap;
+  opacity: 0;
+  transition: .3s;
+}
