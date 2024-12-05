@@ -76,7 +76,6 @@ window.addEventListener("load", () => {
       on: {
         slideChange: function () {
           const { realIndex } = this;
-          console.log(realIndex)
           swiperDots.forEach((e) => e.classList.remove("active"));
           swiperDots[realIndex].classList.add("active");
         }
@@ -107,6 +106,9 @@ window.addEventListener("load", () => {
       circle.forEach((e) => e.querySelector(".circle").style.animationPlayState = 'running');
     });
   });
+
+  const family = document.querySelector(".family");
+  family.querySelector("li").addEventListener("click", () => family.classList.toggle("on"));
 
   window.addEventListener("scroll", (e) => {
 

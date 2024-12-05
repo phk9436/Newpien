@@ -42,7 +42,7 @@ body {
   position: relative;
 }
 
-section:not(.section01) {
+section:not(.section01, .section06) {
   background-color: #fff;
 }
 
@@ -669,7 +669,6 @@ h2 {
   right: 0;
   opacity: 1;
   transform: translateY(-50%);
-  transition-delay: 0s;
 }
 
 .faqWrapper.active .circleCont:nth-child(2):hover {
@@ -688,7 +687,6 @@ h2 {
   bottom: 0;
   opacity: 1;
   transform: translateX(-50%);
-  transition-delay: 0s;
 }
 
 .faqWrapper.active .circleCont:nth-child(3):hover {
@@ -707,11 +705,14 @@ h2 {
   left: 0;
   opacity: 1;
   transform: translateY(-50%);
-  transition-delay: 0s;
 }
 
 .faqWrapper.active .circleCont:nth-child(4):hover {
   transform: translate(-25%, -50%);
+}
+
+.faqWrapper.active .circleCont {
+  transition-delay: 0s;
 }
 
 .faqWrapper .circle::before {
@@ -761,4 +762,69 @@ h2 {
 .faqDesc {
   font-size: 20px;
   margin-top: 200px;
+}
+
+.section06 {
+  padding: 110px 0 200px;
+  background-color: #000;
+}
+
+.section06 .footerInfo {
+  font-size: 700;
+  color: #fff;
+  margin: 32px 0 75px;
+}
+
+.section06 .container {
+  position: relative;
+}
+
+ul.family {
+  height: 50px;
+  transition: .5s;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  width: 280px;
+  overflow: hidden;
+  position: absolute;
+}
+
+ul.family.on {
+  height: 150px;
+}
+
+ul.family a {
+  display: block;
+}
+
+ul.family li {
+  font-size: 16px;
+  color: #fff;
+  line-height: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+ul.family li::after {
+  content: '';
+  display: block;
+  width: 20px;
+  aspect-ratio: 2/1;
+  background: url("./images/siteArrow.png") no-repeat center/contain;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ul.family.on li::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+ul.family li:not(:nth-child(1)) {
+  border-top: 1px solid #6f6f6f;
+}
+
+ul.family li:not(:nth-child(1))::after {
+  transform: translateY(-50%) rotate(-90deg);
 }
