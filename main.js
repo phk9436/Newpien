@@ -82,10 +82,21 @@ window.addEventListener("load", () => {
       },
     });
 
-    swiperDots.forEach((e, i) => e.addEventListener("click", () => swiper.slideTo(i)));
+    swiperDots.forEach((e, i) => e.addEventListener("click", () => {
+      console.log(i)
+      swiper.slideTo(i)
+    }));
   }
   setSwiper();
 
+  let isCircleActive = false;
+  const circleFunc = () => {
+    if (isCircleActive) return;
+    const faqWrapper = document.querySelector(".faqWrapper");
+    faqWrapper.classList.add("on");
+    setTimeout(() => faqWrapper.classList.add("active"), 800);
+    isCircleActive = true;
+  };
   const circleWrapper = document.querySelector(".circleWrapper");
   const circle = document.querySelectorAll(".circleCont");
   circle.forEach((e) => {
@@ -115,6 +126,8 @@ window.addEventListener("load", () => {
     const sect3Item = document.querySelector(".section03 .items");
     scrollCheck(document.querySelector(".section03")) ? sect3Item.classList.add("on") : sect3Item.classList.remove("on");
 
+    //섹션5 이벤트
+    scrollCheck(document.querySelector(".section05 h2")) && circleFunc();
   });
 
 });
