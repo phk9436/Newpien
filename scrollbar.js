@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     thumb.style.transform = `translateY(${scrollRatio * (windowHeight - thumbHeight)}px)`;
   };
 
-  const onMouseDown = () => isDragging = true;;
+  const onMouseDown = () => isDragging = true;
 
   const onMouseMove = (e) => {
     if (!isDragging) return;

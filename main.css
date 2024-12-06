@@ -65,7 +65,7 @@ section:not(.section01, .section06) {
 }
 
 .section01 .bg {
-  background: url("./images/sec1bg.png") no-repeat center/contain;
+  background: url("https://dhnp.speedgabia.com/newpien/sec1bg.png") no-repeat center/contain;
   height: 100%;
   width: 1920px;
   position: absolute;
@@ -158,7 +158,7 @@ section:not(.section01, .section06) {
 }
 
 .section2Top div:nth-child(2) {
-  background: transparent url("./images/sec2top.png") no-repeat right/cover;
+  background: transparent url("https://dhnp.speedgabia.com/newpien/sec2top.png") no-repeat right/cover;
   width: 70vw;
   max-width: 1520px;
 }
@@ -214,12 +214,12 @@ h2 {
 }
 
 .kneeOff {
-  background: url("./images/knee.png") no-repeat center/100%;
+  background: url("https://dhnp.speedgabia.com/newpien/knee.png") no-repeat center/100%;
   opacity: 1;
 }
 
 .kneeOn {
-  background: url("./images/knee_on.png") no-repeat center/100%;
+  background: url("https://dhnp.speedgabia.com/newpien/knee_on.png") no-repeat center/100%;
   opacity: 0;
 }
 
@@ -433,7 +433,7 @@ h2 {
 .slideWrapper {
   width: 1520px;
   padding: 0 40px;
-  background: transparent url("./images/slideBg.png") 100%;
+  background: transparent url("https://dhnp.speedgabia.com/newpien/slideBg.png") 100%;
   position: relative;
 }
 
@@ -516,7 +516,7 @@ h2 {
   width: 23px;
   height: 36px;
   bottom: 125px;
-  background: url("./images/slidearrow.png") no-repeat center/contain;
+  background: url("https://dhnp.speedgabia.com/newpien/slidearrow.png") no-repeat center/contain;
   position: absolute;
   z-index: 9;
 }
@@ -575,7 +575,7 @@ h2 {
   width: 830px;
   aspect-ratio: 1;
   margin: auto;
-  background: url("./images/faqBg.png") no-repeat center/80%;
+  background: url("https://dhnp.speedgabia.com/newpien/faqBg.png") no-repeat center/80%;
   position: relative;
 }
 
@@ -817,7 +817,7 @@ ul.family li::after {
   display: block;
   width: 20px;
   aspect-ratio: 2/1;
-  background: url("./images/siteArrow.png") no-repeat center/contain;
+  background: url("https://dhnp.speedgabia.com/newpien/siteArrow.png") no-repeat center/contain;
   position: absolute;
   right: 0;
   top: 50%;
