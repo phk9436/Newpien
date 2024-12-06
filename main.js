@@ -32,14 +32,17 @@ window.addEventListener("load", () => {
       knee.classList.add("on");
       kneeOff.style.opacity = 0;
       kneeOn.style.opacity = 1;
+      document.querySelector(".sectionInter").style.paddingTop = '0px';
     } else {
       knee.style.width = `${newW}px`;
       knee.style.height = `${newH}px`;
       kneeOff.style.opacity = 1 - wgap;
       kneeOn.style.opacity = wgap;
       knee.classList.remove("on");
+      document.querySelector(".sectionInter").style.paddingTop = `${(maxW / ratio - newH)}px`;
     }
   }
+  resizeKnee();
 
   const scrollCheck = (el) => {
     const elementTop = el.getBoundingClientRect().top + window.scrollY;
@@ -110,24 +113,49 @@ window.addEventListener("load", () => {
   const family = document.querySelector(".family");
   family.querySelector("li").addEventListener("click", () => family.classList.toggle("on"));
 
-  window.addEventListener("scroll", (e) => {
+  const navSect = document.querySelectorAll(".navigate");
+  const navBtn = document.querySelectorAll("nav li");
+  const navFunc = () => {
+    navSect.forEach((e, i) => {
+      if (scrollCheck(e)) {
+        navBtn.forEach((e) => e.classList.remove("on"));
+        navBtn[i].classList.add("on");
+        return;
+      }
+    });
+  };
+  navFunc();
 
+  const navigateSect = (evt, i) => {
+    evt.preventDefault();
+    let sectPosition = document.querySelectorAll(".navigate")[i].getBoundingClientRect().top + window.scrollY + 10;
+    if (i === 0) {
+      sectPosition = 0;
+    }
+    if (i === 2) sectPosition += 100;
+    window.scrollTo({
+      top: sectPosition,
+      behavior: "smooth"
+    });
+  };
+  navBtn.forEach((e, i) => e.querySelector("a").addEventListener("click", (evt) => navigateSect(evt, i)));
+
+  window.addEventListener("scroll", () => {
     //섹션1 이벤트
     const itemWrapper = document.querySelector(".section01 .itemWrapper");
     const txtContainer = document.querySelector(".section01 .txtContainer");
     const isScroll = (window.scrollY / (vh / 2)) > 0.7;
     txtContainer.style.opacity = isScroll > 0.7 ? 0 : 1;
     itemWrapper.style.opacity = isScroll > 0.7 ? 0 : 1;
-
     //섹션2 이벤트
     resizeKnee();
-
     //섹션3 이벤트
     const sect3Item = document.querySelector(".section03 .items");
     scrollCheck(document.querySelector(".section03")) ? sect3Item.classList.add("on") : sect3Item.classList.remove("on");
-
     //섹션5 이벤트
     scrollCheck(document.querySelector(".section05 h2")) && circleFunc();
+    //네비게이션 이벤트
+    navFunc();
   });
 
 });

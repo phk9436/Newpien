@@ -235,8 +235,8 @@ h2 {
 }
 
 .section03 {
-  padding-top: 300px;
-  padding-bottom: 360px;
+  padding-top: 200px;
+  padding-bottom: 260px;
 }
 
 .section03 .items {
@@ -387,7 +387,8 @@ h2 {
 }
 
 .sectionInter {
-  height: 213px;
+  height: 313px;
+  box-sizing: content-box;
 }
 
 .slideArea {
@@ -555,11 +556,12 @@ h2 {
 }
 
 .section04 {
-  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 250px;
 }
 
 .section05 {
-  padding-top: 200px;
+  padding-top: 100px;
   padding-bottom: 150px;
 }
 
@@ -835,12 +837,18 @@ nav {
   right: 20px;
   transform: translateY(-50%);
   z-index: 999;
+  opacity: 1;
+  transition: .5s;
+}
+
+nav.off {
+  opacity: 0;
 }
 
 nav ul {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 22px;
 }
 
 nav li {
@@ -865,7 +873,7 @@ nav li a {
 nav li a::after {
   content: '';
   display: block;
-  width: 10px;
+  width: 6px;
   aspect-ratio: 1;
   background-color: #ababab;
   border-radius: 50%;
@@ -876,8 +884,9 @@ nav li a::after {
   transition: .2s;
 }
 
-nav li:hover a::after {
-  width: 14px;
+nav li:hover a::after,
+nav li.on a::after {
+  width: 12px;
 }
 
 nav li:hover p {
