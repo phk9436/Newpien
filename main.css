@@ -32,6 +32,10 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   max-width: 1520px;
   margin: auto;
@@ -940,4 +944,21 @@ nav .navGreen li p {
 
 nav .navGreen li.on p {
   opacity: 1;
+}
+
+.scrollbar {
+  width: 4px;
+  height: calc(100 * var(--vh));
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.scrollThumb {
+  width: 100%;
+  position: absolute;
+  height: 100px;
+  background-color: #08482b;
+  border-radius: 2px;
 }
