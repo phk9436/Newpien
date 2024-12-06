@@ -117,7 +117,7 @@ section:not(.section01, .section06) {
 .section01 .itemWrapper {
   position: absolute;
   top: 0;
-  right: 40px;
+  right: 80px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -835,7 +835,7 @@ ul.family li:not(:nth-child(1))::after {
 nav {
   position: fixed;
   top: 50%;
-  right: 20px;
+  right: 14px;
   transform: translateY(-50%);
   z-index: 999;
   opacity: 1;
@@ -876,13 +876,13 @@ nav li a::after {
   display: block;
   width: 6px;
   aspect-ratio: 1;
-  background-color: #ababab;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: .2s;
+  
 }
 
 nav li:hover a::after,
@@ -896,9 +896,48 @@ nav li:hover p {
 
 nav p {
   font-size: 14px;
+  font-weight: 500;
   text-align: right;
-  color: #ababab;
+  color: rgba(0, 0, 0, 0.3);
   white-space: nowrap;
   opacity: 0;
   transition: .3s;
+  letter-spacing: -0.05em;
+}
+
+nav .navGreen {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: .5s;
+}
+
+nav .navGreen.on {
+  opacity: 1;
+}
+
+nav .navGray {
+  opacity: 1;
+  transition: .5s;
+}
+
+nav .navGray.off {
+  opacity: 0;
+}
+
+nav .navGreen li a::after {
+  background-color: #13AE67;
+}
+
+nav .navGreen li:nth-child(1) a::after {
+  width: 12px;
+}
+
+nav .navGreen li p {
+  color: #13AE67;
+}
+
+nav .navGreen li.on p {
+  opacity: 1;
 }

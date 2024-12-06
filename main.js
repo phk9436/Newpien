@@ -114,7 +114,7 @@ window.addEventListener("load", () => {
   family.querySelector("li").addEventListener("click", () => family.classList.toggle("on"));
 
   const navSect = document.querySelectorAll(".navigate");
-  const navBtn = document.querySelectorAll("nav li");
+  const navBtn = document.querySelectorAll(".navGray li");
   const navFunc = () => {
     navSect.forEach((e, i) => {
       if (scrollCheck(e)) {
@@ -124,7 +124,6 @@ window.addEventListener("load", () => {
       }
     });
   };
-  navFunc();
 
   const navigateSect = (evt, i) => {
     evt.preventDefault();
@@ -139,24 +138,42 @@ window.addEventListener("load", () => {
     });
   };
   navBtn.forEach((e, i) => e.querySelector("a").addEventListener("click", (evt) => navigateSect(evt, i)));
+  navBtn.forEach((e, i) => {
+    const navGreen = document.querySelectorAll(".navGreen li");
+    e.addEventListener("mouseover", () => {
+      navGreen.forEach((e) => e.classList.remove("on"));
+      navGreen[i].classList.add("on");
+    });
+    e.addEventListener("mouseout", () => {
+      navGreen.forEach((e) => e.classList.remove("on"));
+    });
+  });
 
-  window.addEventListener("scroll", () => {
+  const sectFunc = () => {
     //섹션1 이벤트
     const itemWrapper = document.querySelector(".section01 .itemWrapper");
     const txtContainer = document.querySelector(".section01 .txtContainer");
-    const isScroll = (window.scrollY / (vh / 2)) > 0.7;
-    txtContainer.style.opacity = isScroll > 0.7 ? 0 : 1;
-    itemWrapper.style.opacity = isScroll > 0.7 ? 0 : 1;
-    //섹션2 이벤트
-    resizeKnee();
+    const isScroll = (window.scrollY / (vh / 2)) > 0.8;
+    txtContainer.style.opacity = isScroll ? 0 : 1;
+    itemWrapper.style.opacity = isScroll ? 0 : 1;
+    !isScroll
+      ? (
+        document.querySelector(".navGray").classList.add("off"),
+        document.querySelector(".navGreen").classList.add("on")
+      )
+      : (
+        document.querySelector(".navGray").classList.remove("off"),
+        document.querySelector(".navGreen").classList.remove("on")
+      );
+    resizeKnee(); //섹션2 이벤트
     //섹션3 이벤트
     const sect3Item = document.querySelector(".section03 .items");
     scrollCheck(document.querySelector(".section03")) ? sect3Item.classList.add("on") : sect3Item.classList.remove("on");
-    //섹션5 이벤트
-    scrollCheck(document.querySelector(".section05 h2")) && circleFunc();
-    //네비게이션 이벤트
-    navFunc();
-  });
+    scrollCheck(document.querySelector(".section05 h2")) && circleFunc();//섹션5 이벤트
+    navFunc(); //네비게이션 이벤트
+  };
+  sectFunc();
+  window.addEventListener("scroll", sectFunc);
 
 });
 
