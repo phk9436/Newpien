@@ -357,11 +357,11 @@ h2 {
 }
 
 .dot {
-  width: 20px;
+  width: 18px;
   aspect-ratio: 1;
   background-color: #13AE67;
   position: absolute;
-  top: 238px;
+  top: calc(100% - 70px);
   right: 55px;
   border-radius: 50%;
   transition: 0.5s;
@@ -388,7 +388,7 @@ h2 {
 }
 
 .section03 .item:hover .dot {
-  top: 55px;
+  top: 45px;
 }
 
 .sectionInter {
@@ -519,6 +519,7 @@ h2 {
   background: url("https://dhnp.speedgabia.com/newpien/slidearrow.png") no-repeat center/contain;
   position: absolute;
   z-index: 9;
+  cursor: pointer;
 }
 
 .swiperArrowPrev {
