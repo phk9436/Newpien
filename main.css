@@ -912,7 +912,7 @@ nav p {
   letter-spacing: -0.05em;
 }
 
-nav .navGreen {
+nav .navMain {
   position: absolute;
   top: 0;
   z-index: -1;
@@ -920,7 +920,7 @@ nav .navGreen {
   transition: .5s;
 }
 
-nav .navGreen.on {
+nav .navMain.on {
   opacity: 1;
 }
 
@@ -933,19 +933,19 @@ nav .navGray.off {
   opacity: 0;
 }
 
-nav .navGreen li a::after {
-  background-color: #13AE67;
+nav .navMain li a::after {
+  background-color: #fff;
 }
 
-nav .navGreen li:nth-child(1) a::after {
+nav .navMain li:nth-child(1) a::after {
   width: 12px;
 }
 
-nav .navGreen li p {
-  color: #13AE67;
+nav .navMain li p {
+  color: #fff;
 }
 
-nav .navGreen li.on p {
+nav .navMain li.on p {
   opacity: 1;
 }
 
