@@ -57,15 +57,22 @@ section:not(.section01, .section06) {
   position: fixed;
   z-index: -1;
   top: 0;
+  background: linear-gradient(135deg, #0C483F 0%, #038772 33%, #30BF94 66%, #86F3E0 100%);
+}
+
+.section01Area {
+  height: calc(100 * var(--vh));
+  max-height: 1080px;
+  background-color: transparent;
 }
 
 .section01 .container {
   height: calc(100 * var(--vh));
+  max-height: 1080px;
   z-index: 1;
 }
 
 .section01 .bg {
-  background: url("https://dhnp.speedgabia.com/newpien/sec1bg.png") no-repeat center/contain;
   height: 100%;
   width: 1920px;
   position: absolute;
@@ -88,40 +95,53 @@ section:not(.section01, .section06) {
 
 .section01 .txtWrapper {
   position: absolute;
-  top: calc(50 * var(--vh));
-  transform: translateY(-50%);
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.section01 .txtWrapper p {
-  font-size: 24px;
+.section01 .txtWrapper div:not(:nth-child(2)) {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.section01 .txtWrapper div:nth-child(1) {
+  padding-bottom: 110px;
+}
+
+.section01 .txtWrapper div:nth-child(3) {
+  padding-bottom: 60px;
+}
+
+
+
+.section01 .txtWrapper p.txtmain {
+  font-size: 38px;
   color: #fff;
-}
-
-.section01 .txtWrapper img {
-  margin-top: 32px;
+  margin-top: auto;
 }
 
 .section01 .txtSub {
   font-size: 15px;
   color: #fff;
-  bottom: 56px;
-  position: absolute;
 }
 
 .section01 .mainItem {
   top: calc(50 * var(--vh));
-  max-height: calc((100 * var(--vh)) - 100px);
-  transform: translateY(200px);
+  height: 100%;
   opacity: 0;
   transition: 1.5s;
   transition-delay: 0.5s;
   display: block;
+  z-index: -1;
 }
 
 .section01 .itemWrapper {
   position: absolute;
   top: 0;
-  right: 80px;
+  right: 40px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -129,48 +149,11 @@ section:not(.section01, .section06) {
 }
 
 .section01 .mainItem.on {
-  transform: translateY(10px);
   opacity: 1;
-  animation: itemAni 1s 2.5s alternate infinite;
-}
-
-@keyframes itemAni {
-  0% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
-.section2Top {
-  display: flex;
-  width: 100vw;
-  overflow-x: hidden;
-  height: 224px;
-  margin-top: calc(100 * var(--vh));
-}
-
-.section2Top div:nth-child(1) {
-  background-color: #fff;
-  flex: 1;
-}
-
-.section2Top div:nth-child(2) {
-  background: transparent url("https://dhnp.speedgabia.com/newpien/sec2top.png") no-repeat right/cover;
-  width: 70vw;
-  max-width: 1520px;
-}
-
-
-.section2Top div:nth-child(3) {
-  background-color: transparent;
-  flex: 1;
 }
 
 .section02 {
-  padding: 60px 0 40px;
+  padding: 180px 0 40px;
 }
 
 h3 {
@@ -180,6 +163,7 @@ h3 {
 
 h2 {
   font-size: 65px;
+  letter-spacing: -0.02em;
   font-weight: 400;
   line-height: 1.2;
   margin-top: 30px;
@@ -225,7 +209,7 @@ h2 {
 
 .itemcase {
   position: absolute;
-  right: 0;
+  right: -100px;
   bottom: -218px;
   opacity: 0;
   transition: .5s;
@@ -303,7 +287,6 @@ h2 {
   justify-content: space-between;
   position: relative;
   transition: 0.5s;
-  cursor: pointer;
   overflow: hidden;
 }
 
@@ -392,8 +375,19 @@ h2 {
 }
 
 .sectionInter {
-  height: 313px;
   box-sizing: content-box;
+}
+
+.sectionInter .container {
+  padding-top: 400px;
+}
+
+.sectionInter .txtInter {
+  font-size: 48px;
+}
+
+.sectionInter .txtInter em {
+  color: #13AE67;
 }
 
 .slideArea {
@@ -540,6 +534,7 @@ h2 {
 
 .swiper-dots li {
   padding: 18px;
+  font-weight: 500;
   font-size: 18px;
   line-height: 28px;
   background-color: #f6f6f6;
@@ -562,8 +557,17 @@ h2 {
 }
 
 .section04 {
-  padding-top: 100px;
-  padding-bottom: 250px;
+  padding: 100px 0;
+}
+
+.sectionPrd img {
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.sectionPrd.on img {
+  opacity: 1;
 }
 
 .section05 {
@@ -587,7 +591,7 @@ h2 {
 }
 
 .faqWrapper.active .circleWrapper {
-  animation: circleWrapper 16s linear infinite;
+  animation: circleWrapper 24s linear infinite;
 }
 
 @keyframes circleWrapper {
@@ -619,13 +623,12 @@ h2 {
   align-items: center;
   text-align: center;
   position: absolute;
-  cursor: pointer;
   transition: .5s;
   overflow: hidden;
 }
 
 .faqWrapper.active .circle {
-  animation: circle 16s linear infinite;
+  animation: circle 24s linear infinite;
 }
 
 .faqWrapper .circleCont:hover {
@@ -887,7 +890,6 @@ nav li a::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
 }
 
 nav li:hover a::after,
@@ -967,4 +969,29 @@ nav .navGreen li.on p {
 
 * {
   user-select: none;
+}
+
+footer .logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+footer .logoWrapper li:nth-child(1) {
+  padding-right: 42px;
+  position: relative;
+}
+
+footer .logoWrapper li:nth-child(1)::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 22px);
+}
+
+footer .logoWrapper li:nth-child(2) {
+  padding-left: 42px;
 }
