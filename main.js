@@ -173,7 +173,7 @@ window.addEventListener("load", () => {
     navFunc(); //네비게이션 이벤트
     //섹션prd 이벤트
     const sectPrd = document.querySelector(".sectionPrd");
-    scrollCheck(sectPrd, 50) ? sectPrd.classList.add("on") : sectPrd.classList.remove("on");
+    scrollCheck(sectPrd) ? sectPrd.classList.add("on") : sectPrd.classList.remove("on");
   };
   sectFunc();
   window.addEventListener("scroll", sectFunc);
