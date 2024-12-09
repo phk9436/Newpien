@@ -157,7 +157,6 @@ section:not(.section01, .section06) {
   width: 100vw;
   overflow-x: hidden;
   height: 224px;
-  position: absolute;
 }
 
 .section02Top div:nth-child(1) {
@@ -178,7 +177,6 @@ section:not(.section01, .section06) {
 
 .section02 {
   padding: 120px 0 40px;
-  margin-top: 224px;
   position: relative;
 }
 
