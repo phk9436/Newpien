@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const thumbHeight = thumb.clientHeight;
 
     const scrollRatio = scrollTop / bodyHeight;
-    thumb.style.transform = `translateY(${scrollRatio * (windowHeight - thumbHeight)}px)`;
+    thumb.style.transform = `translateY(${scrollRatio * windowHeight}px)`;
   };
 
   const onMouseDown = () => isDragging = true;
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const constrainedY = Math.max(0, Math.min(newY, scrollbarHeight));
     // 스크롤 비율 계산
     const scrollRatio = constrainedY / scrollbarHeight;
-    window.scrollTo(0, scrollRatio * maxScrollTop);
+    window.scrollTo(0, scrollRatio * (maxScrollTop - scrollbarHeight));
   };
 
   const onMouseUp = () => isDragging = false;
