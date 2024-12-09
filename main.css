@@ -908,7 +908,7 @@ nav li a::after {
   display: block;
   width: 6px;
   aspect-ratio: 1;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(171, 171, 171, 0.5);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -929,7 +929,7 @@ nav p {
   font-size: 14px;
   font-weight: 500;
   text-align: right;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(171, 171, 171, 0.5);
   white-space: nowrap;
   opacity: 0;
   transition: .3s;
