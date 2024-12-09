@@ -169,7 +169,7 @@ window.addEventListener("load", () => {
     //섹션3 이벤트
     const sect3Item = document.querySelector(".section03 .items");
     scrollCheck(document.querySelector(".section03"), -100) ? sect3Item.classList.add("on") : sect3Item.classList.remove("on");
-    scrollCheck(document.querySelector(".section05 h2")) && circleFunc();//섹션5 이벤트
+    scrollCheck(document.querySelector(".section05")) && circleFunc();//섹션5 이벤트
     navFunc(); //네비게이션 이벤트
     //섹션prd 이벤트
     const sectPrd = document.querySelector(".sectionPrd");
