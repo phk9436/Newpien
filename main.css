@@ -86,6 +86,7 @@ section:not(.section01, .section06) {
   opacity: 0;
   transform: translateX(-50px);
   transition: 1s;
+  transition-delay: 0.5s;
 }
 
 .txtContainer.on {
@@ -133,7 +134,6 @@ section:not(.section01, .section06) {
   height: 100%;
   opacity: 0;
   transition: 1.5s;
-  transition-delay: 0.5s;
   display: block;
   z-index: -1;
 }
