@@ -152,8 +152,34 @@ section:not(.section01, .section06) {
   opacity: 1;
 }
 
+.section02Top {
+  display: flex;
+  width: 100vw;
+  overflow-x: hidden;
+  height: 224px;
+  position: absolute;
+}
+
+.section02Top div:nth-child(1) {
+  background-color: #fff;
+  flex: 1;
+}
+
+.section02Top div:nth-child(2) {
+  background: transparent url("https://dhnp.speedgabia.com/newpien/sec2top.png") no-repeat right/cover;
+  width: 70vw;
+  max-width: 1520px;
+}
+
+.section02Top div:nth-child(3) {
+  background-color: transparent;
+  flex: 1;
+}
+
 .section02 {
-  padding: 180px 0 40px;
+  padding: 120px 0 40px;
+  margin-top: 224px;
+  position: relative;
 }
 
 h3 {
