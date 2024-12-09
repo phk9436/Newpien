@@ -809,7 +809,7 @@ h2 {
 }
 
 .section06 .footerInfo {
-  font-size: 700;
+  font-size: 16px;
   color: #fff;
   margin: 32px 0 75px;
 }
@@ -1009,6 +1009,10 @@ footer .logoWrapper li:nth-child(1) {
   position: relative;
 }
 
+footer .logoWrapper li:nth-child(1) img {
+  width: 270px;
+}
+
 footer .logoWrapper li:nth-child(1)::after {
   content: '';
   display: block;
@@ -1022,4 +1026,8 @@ footer .logoWrapper li:nth-child(1)::after {
 
 footer .logoWrapper li:nth-child(2) {
   padding-left: 42px;
+}
+
+footer .logoWrapper li:nth-child(2) img {
+  width: 180px;
 }
