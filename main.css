@@ -113,11 +113,13 @@ section:not(.section01, .section06) {
   padding-bottom: 110px;
 }
 
+.section01 .txtWrapper div:nth-child(2) img {
+  width: 680px;
+}
+
 .section01 .txtWrapper div:nth-child(3) {
   padding-bottom: 60px;
 }
-
-
 
 .section01 .txtWrapper p.txtmain {
   font-size: 38px;
@@ -182,22 +184,22 @@ section:not(.section01, .section06) {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 400;
 }
 
 h2 {
-  font-size: 65px;
+  font-size: 68px;
   letter-spacing: -0.02em;
   font-weight: 400;
   line-height: 1.2;
-  margin-top: 30px;
+  margin-top: 32px;
   font-family: 'Noto Sans', sans-serif;
 }
 
 .section02 p.desc {
-  font-size: 20px;
-  margin-top: 32px;
+  font-size: 24px;
+  margin-top: 36px;
   font-weight: 500;
 }
 
@@ -333,7 +335,8 @@ h2 {
 }
 
 .section03 .title {
-  font-size: 32px;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 .section03 .desc {
@@ -408,7 +411,7 @@ h2 {
 }
 
 .sectionInter .txtInter {
-  font-size: 48px;
+  font-size: 45px;
 }
 
 .sectionInter .txtInter em {
@@ -507,7 +510,7 @@ h2 {
 }
 
 .slideContent p {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 2;
   letter-spacing: -0.05em;
 }
@@ -796,7 +799,7 @@ h2 {
 }
 
 .faqDesc {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 200px;
 }
 
