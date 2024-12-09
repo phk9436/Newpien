@@ -79,6 +79,7 @@ section:not(.section01, .section06) {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  background: radial-gradient(rgba(12, 72, 63, 0.5) 0%, transparent 50%);
 }
 
 .txtContainer {
