@@ -57,7 +57,7 @@ section:not(.section01, .section06) {
   position: fixed;
   z-index: -1;
   top: 0;
-  background: linear-gradient(135deg, #0C483F 0%, #038772 33%, #30BF94 66%, #86F3E0 100%);
+  background: linear-gradient(135deg, #0C483F 11%, #038772 44%, #30BF94 77%, #86F3E0 100%);
 }
 
 .section01Area {
