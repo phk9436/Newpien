@@ -60,40 +60,34 @@ window.addEventListener("load", () => {
     return window.scrollY >= elementTop;
   }
 
+  const swiperDots = document.querySelectorAll(".swiper-dots li");
   const swiperSetting = {
     slidesPerView: 1,
-    // 무한 루프
     autoplay: true,
     loop: true,
     loopAdditionalSlides: 1,
-    //페이지를 로딩한 직후 작동
     observer: true,
     observeParents: true,
-    // loopedSlides: 1,
-    // pagination: {
-    //   el: ".swiperBtnWrapper",
-    //   clickable: true,
-    // },
     navigation: {   // 버튼
       nextEl: ".swiperArrowNext",
       prevEl: ".swiperArrowPrev",
     },
+    on: {
+      slideChange: function () {
+        const { realIndex } = this;
+        swiperDots.forEach((e) => e.classList.remove("active"));
+        swiperDots[realIndex].classList.add("active");
+      }
+    },
+    scrollbar: { el: ".swiper-scroll" },
   }
 
   const setSwiper = () => {
-    const swiperDots = document.querySelectorAll(".swiper-dots li");
+
     const swiper = new Swiper(".swiper", {
       ...swiperSetting,
       effect: 'fade',
       fadeEffect: { crossFade: true },
-      scrollbar: { el: ".swiper-scroll" },
-      on: {
-        slideChange: function () {
-          const { realIndex } = this;
-          swiperDots.forEach((e) => e.classList.remove("active"));
-          swiperDots[realIndex].classList.add("active");
-        }
-      },
     });
 
     swiperDots.forEach((e, i) => e.addEventListener("click", () => swiper.slideToLoop(i)));

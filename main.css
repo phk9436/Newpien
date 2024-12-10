@@ -1112,7 +1112,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   h3 {
-    font-size: 3.4vw;
+    font-size: 3.2vw;
   }
 
   h2 {
@@ -1206,6 +1206,99 @@ footer .logoWrapper li:nth-child(2) img {
 
   .section03 .item:hover .dot {
     top: 2.5vw;
+  }
+
+  .section04 {
+    padding: 0;
+  }
+
+  .swiper-dots {
+    justify-content: center;
+    margin-top: 10vw;
+    gap: 1vw;
+  }
+
+  .swiper-dots li {
+    padding: 1.4vw;
+    border-radius: 1vw;
+    font-size: 2vw;
+  }
+
+  .slideArea {
+    height: auto;
+    margin-top: 5vw;
+  }
+  
+  .slideRight {
+    background-color: transparent;
+  }
+
+  .slideArea::before {
+    height: calc(100% - 160px);
+    bottom: 80px;
+  }
+
+  .slideWrapper {
+    width: calc(100vw - 80px);
+    background-color: #ececec;
+    background-image: none;
+    border-radius: 4vw;
+    max-width: 840px;
+    aspect-ratio: 714/740;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .slideWrapper .swiper {
+    width: 100%;
+    height: 100%;
+    float: none;
+  }
+
+  .swiper-slide {
+    flex-direction: column;
+    width: auto;
+    padding: 6vw;
+    padding-bottom: 14vw;
+    gap: 4vw;
+  }
+
+  .slideTitle h4 {
+    margin-top: 0;
+    text-align: left;
+    font-size: 5vw;
+  }
+
+  .slideContent {
+    height: 100%;
+  }
+
+  .slideContent p {
+    font-size: 2.4vw;
+  }
+
+  .slideContent span {
+    font-size: 1.8vw;
+  }
+
+  .swiper-scroll {
+    width: calc(100% - 22vw - 46px);
+    right: initial;
+    left: 6vw;
+    z-index: 3;
+    bottom: calc(7vw - 2px);
+  }
+
+  .swiperArrowPrev, .swiperArrowNext {
+    bottom: calc(7vw - 18px);
+  }
+
+  .swiperArrowNext {
+    right: 6vw;
+  }
+
+  .swiperArrowPrev {
+    right: calc(10vw + 23px);
   }
 
 }
