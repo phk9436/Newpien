@@ -1147,4 +1147,65 @@ footer .logoWrapper li:nth-child(2) img {
     width: 70vw;
   }
 
+  .sectionInter .txtInter {
+    font-size: 4.5vw;
+  }
+
+  .sectionInter .container {
+    padding-top: 28vw;
+  }
+
+  .section03 {
+    padding-top: 20vw;
+    padding-bottom: 20vw;
+  }
+
+  .section03 :is(.items, .itemWrapper) {
+    gap: 2vw;
+  }
+
+  .section03 .item {
+    aspect-ratio: 300/330;
+    border-radius: 2vw;
+    padding: 2.5vw 1.8vw;
+  }
+
+  .section03 .icon {
+    font-size: 3.2vw;
+  }
+
+  .section03 .title {
+    font-size: 2.8vw;
+  }
+
+  .section03 .info {
+    font-size: 1.5vw;
+  }
+
+  .section03 .item:hover .info {
+    padding-top: 1.2vw;
+  }
+
+  .section03 .info em {
+    font-size: 2vw;
+  }
+
+  .section03 .info span {
+    font-size: 1.1vw;
+  }
+
+  .section03 .info.nowrap {
+    white-space: nowrap;
+  }
+
+  .dot {
+    width: 1.4vw;
+    right: 1.8vw;
+    top: calc(100% - 5vw);
+  }
+
+  .section03 .item:hover .dot {
+    top: 2.5vw;
+  }
+
 }
