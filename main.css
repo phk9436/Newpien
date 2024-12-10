@@ -1077,7 +1077,7 @@ footer .logoWrapper li:nth-child(2) img {
     position: absolute;
     top: 0;
     left: 0;
-    background: url("./images/mainImage_pad.png") no-repeat center/cover;
+    background: url("https://dhnp.speedgabia.com/newpien/mainImage_pad.png") no-repeat center/cover;
   }
 
   .section01 .txtWrapper {
@@ -1130,11 +1130,11 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .kneeOff {
-    background-image: url("./images/knee_pad.png");
+    background-image: url("https://dhnp.speedgabia.com/newpien/knee_pad.png");
   }
 
   .kneeOn {
-    background-image: url("./images/knee_on_pad.png");
+    background-image: url("https://dhnp.speedgabia.com/newpien/knee_on_pad.png");
   }
 
   .itemcase {
