@@ -609,10 +609,9 @@ h2 {
 }
 
 .faqWrapper {
-  margin-top: 50px;
   width: 830px;
   aspect-ratio: 1;
-  margin: auto;
+  margin: 50px auto 0;
   background: url("https://dhnp.speedgabia.com/newpien/faqBg.png") no-repeat center/80%;
   position: relative;
 }
@@ -671,7 +670,7 @@ h2 {
 }
 
 .faqWrapper .circleCont:hover .circle {
-  border-radius: 60px;
+  border-radius: 50px;
 }
 
 @keyframes circle {
@@ -767,14 +766,14 @@ h2 {
   border-radius: 50%;
   background-color: #13AE67;
   position: absolute;
-  top: 20px;
+  top: 24px;
   left: calc(50% - 5px);
   transition: .5s;
 }
 
 .faqWrapper .circleCont:hover .circle::before {
   left: 30px;
-  width: 20px;
+  width: 24px;
 }
 
 .faqWrapper .circle .title {
@@ -1301,4 +1300,102 @@ footer .logoWrapper li:nth-child(2) img {
     right: calc(10vw + 23px);
   }
 
+  .faqDesc {
+    margin-top: 14vw;
+    font-size: 2.4vw;
+  }
+
+  .section05 {
+    padding-top: 20vw;
+    padding-bottom: 10vw;
+  }
+
+  footer .logoWrapper li:nth-child(1) {
+    padding-right: 4vw;
+  }
+
+  footer .logoWrapper li:nth-child(1) img {
+    width: 26vw;
+    max-width: 270px;
+  }
+
+  footer .logoWrapper li:nth-child(2) {
+    padding-left: 4vw;
+  }
+
+  footer .logoWrapper li:nth-child(2) img {
+    width: 22vw;
+    max-width: 180px;
+  }
+
+  .section06 .footerInfo {
+    font-size: 2vw;
+    margin: 4vw 0 8vw;
+  }
+
+  ul.family {
+    width: 40vw;
+    height: 6vw;
+  }
+
+  ul.family.on {
+    height: 18vw;
+  }
+
+  ul.family li {
+    font-size: 2vw;
+    line-height: 6vw;
+  }
+
+  .section06 {
+    padding: 10vw 0 24vw;
+  }
+}
+
+@media screen and (max-width: 990px) {
+
+  .faqWrapper {
+    width: calc(100vw - 160px);
+    margin-top: 10vw;
+  }
+
+  .faqWrapper .circleCont {
+    width: 22vw;
+  }
+
+  .faqWrapper .circleCont:hover {
+    width: 40vw;
+    max-width: 410px;
+  }
+
+  .faqWrapper .circleCont:hover .circle {
+    border-radius: 5vw;
+  }
+
+  .faqWrapper .circle .title {
+    font-size: 2vw;
+  }
+
+  .faqWrapper .circleCont:hover .circle .title {
+    font-size: 3.5vw;
+  }
+
+  .faqWrapper .circle .desc {
+    font-size: 2.2vw;
+    letter-spacing: -0.05em;
+  }
+
+  .faqWrapper .circleCont:hover .circle .desc {
+    padding-top: 2vw;
+  }
+
+  .faqWrapper .circle::before {
+    width: 1.4vw;
+    top: 2.4vw;
+  }
+
+  .faqWrapper .circleCont:hover .circle::before {
+    width: 2.4vw;
+    left: 2.4vw;
+  }
 }
