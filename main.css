@@ -110,11 +110,11 @@ section:not(.section01, .section06) {
 }
 
 .section01 .txtWrapper div:nth-child(1) {
-  padding-bottom: 110px;
+  padding-bottom: 106px;
 }
 
 .section01 .txtWrapper div:nth-child(2) img {
-  width: 680px;
+  width: 660px;
 }
 
 .section01 .txtWrapper div:nth-child(3) {
@@ -122,7 +122,7 @@ section:not(.section01, .section06) {
 }
 
 .section01 .txtWrapper p.txtmain {
-  font-size: 38px;
+  font-size: 36px;
   color: #fff;
   margin-top: auto;
 }
