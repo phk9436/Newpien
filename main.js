@@ -1,8 +1,9 @@
 window.addEventListener("load", () => {
 
   const vh = window.innerHeight;
+  const vw = window.innerWidth;
   document.querySelector(".section01 .txtContainer").classList.add("on");
-  document.querySelector(".section01 .mainItem").classList.add("on");
+  document.querySelectorAll(".section01 .mainItem").forEach((e) => e.classList.add("on"));
 
   const sect2Bottom = document.querySelector(".section02").getBoundingClientRect().bottom + window.scrollY;
 
@@ -16,12 +17,22 @@ window.addEventListener("load", () => {
   }
 
   const resizeKnee = () => {
-    const ratio = 860 / 470;
+    let oldW, oldH, ratio, maxW;
+    if (vw > 1100) {
+      oldW = 860;
+      oldH = 470;
+      ratio = 860 / 470;
+      maxW = 1200;
+    }
+    if (vw <= 1100) {
+      oldW = (vw / 100) * 60;
+      ratio = 714 / 536;
+      oldH = oldW * (536 / 714);
+      maxW = vw - 80;
+    }
     const knee = document.querySelector(".kneeItem");
-    const newH = 470 + isScrollOver();
-    const oldW = 860;
+    const newH = oldH + isScrollOver();
     const newW = newH * ratio;
-    const maxW = 1200;
     const maxWgap = maxW - oldW;
     const wgap = (newW - oldW) / maxWgap;
     const kneeOff = document.querySelector(".kneeOff");

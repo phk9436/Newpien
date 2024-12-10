@@ -24,15 +24,19 @@ em {
   font-weight: 700;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
   color: #101820;
   width: 100vw;
   overflow-y: overlay;
-  overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -500,6 +504,7 @@ h2 {
 }
 
 .slideContent::-webkit-scrollbar {
+  display: block;
   width: 4px;
 }
 
@@ -1030,4 +1035,116 @@ footer .logoWrapper li:nth-child(2) {
 
 footer .logoWrapper li:nth-child(2) img {
   width: 180px;
+}
+
+@media screen and (min-width: 1101px) {
+  .pad {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  .pc {
+    display: none !important;
+  }
+
+  .pad {
+    display: block;
+  }
+
+  .container {
+    max-width: none;
+  }
+
+  .section01Area,
+  .section01 .container {
+    max-height: none;
+  }
+
+  .section01 .container {
+    padding: 0 6vw;
+  }
+
+  .section01 .itemWrapper {
+    right: 0;
+  }
+
+  .section01::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("./images/mainImage_pad.png") no-repeat center/cover;
+  }
+
+  .section01 .txtWrapper {
+    justify-content: flex-start;
+  }
+
+  .section01 .txtWrapper div:not(:nth-child(2)) {
+    height: auto;
+    margin-top: calc(14 * var(--vh));
+  }
+
+  .section01 .txtWrapper p.txtmain {
+    font-size: 4.2vw;
+  }
+
+  .section01 .txtWrapper div:nth-child(1) {
+    padding-bottom: 44px;
+  }
+
+  .section01 .txtWrapper div:nth-child(2) img {
+    width: 74vw;
+  }
+
+  .section01 .txtWrapper div:nth-child(3) {
+    margin-top: auto;
+    padding-bottom: 6vw;
+  }
+
+  .section01 .txtSub {
+    font-size: 2.5vw;
+  }
+
+  h3 {
+    font-size: 3.4vw;
+  }
+
+  h2 {
+    font-size: 8vw;
+    margin-top: 3vw;
+  }
+
+  .section02 p.desc {
+    font-size: 2.8vw;
+    margin-top: 3.2vw;
+  }
+
+  .kneeItem {
+    margin-top: 12vw;
+    width: 40%;
+  }
+
+  .kneeOff {
+    background-image: url("./images/knee_pad.png");
+  }
+
+  .kneeOn {
+    background-image: url("./images/knee_on_pad.png");
+  }
+
+  .itemcase {
+    right: -10vw;
+    bottom: -14vw;
+  }
+
+  .itemcase img {
+    width: 70vw;
+  }
+
 }
