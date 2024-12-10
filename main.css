@@ -1227,7 +1227,7 @@ footer .logoWrapper li:nth-child(2) img {
     height: auto;
     margin-top: 5vw;
   }
-  
+
   .slideRight {
     background-color: transparent;
   }
@@ -1288,7 +1288,8 @@ footer .logoWrapper li:nth-child(2) img {
     bottom: calc(7vw - 2px);
   }
 
-  .swiperArrowPrev, .swiperArrowNext {
+  .swiperArrowPrev,
+  .swiperArrowNext {
     bottom: calc(7vw - 18px);
   }
 
@@ -1349,6 +1350,33 @@ footer .logoWrapper li:nth-child(2) img {
 
   .section06 {
     padding: 10vw 0 24vw;
+  }
+
+  nav ul {
+    gap: 3.4vw;
+  }
+
+  nav li {
+    gap: 0.8vw;
+    height: 1.8vw;
+  }
+
+  nav li a {
+    width: 1.8vw;
+  }
+
+  nav li a::after {
+    width: 1vw;
+  }
+
+  nav li:hover a::after,
+  nav li.on a::after,
+  nav .navMain li:nth-child(1) a::after {
+    width: 1.8vw;
+  }
+
+  nav p {
+    font-size: 1.5vw;
   }
 }
 
