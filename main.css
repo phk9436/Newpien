@@ -1110,6 +1110,14 @@ footer .logoWrapper li:nth-child(2) img {
     font-size: 2.5vw;
   }
 
+  .section02Top {
+    height: 20vw;
+  }
+
+  .section02Top div:nth-child(2) {
+    width: 100vw;
+  }
+
   h3 {
     font-size: 3.2vw;
   }
