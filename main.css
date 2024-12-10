@@ -1268,6 +1268,10 @@ footer .logoWrapper li:nth-child(2) img {
     font-size: 5vw;
   }
 
+  .slideTitle h4 em {
+    font-size: 6vw;
+  }
+
   .slideContent {
     height: 100%;
   }

@@ -56,8 +56,10 @@ window.addEventListener("load", () => {
   resizeKnee();
 
   const scrollCheck = (el, gap = 0) => {
-    const elementTop = el.getBoundingClientRect().top + window.scrollY + gap;
-    return window.scrollY >= elementTop;
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const midpoint = rect.top + (rect.height * 2) / 3;
+    return midpoint < windowHeight;
   }
 
   const swiperDots = document.querySelectorAll(".swiper-dots li");
