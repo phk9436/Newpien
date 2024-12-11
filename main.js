@@ -93,6 +93,13 @@ window.addEventListener("load", () => {
     });
 
     swiperDots.forEach((e, i) => e.addEventListener("click", () => swiper.slideToLoop(i)));
+    const swiperTexts = document.querySelectorAll(".slideContent p");
+    swiperTexts.forEach((e) => {
+      e.addEventListener("mouseover", () => swiper.autoplay.pause());
+      e.addEventListener("touchstart", () => swiper.autoplay.pause());
+      e.addEventListener("mouseout", () => swiper.autoplay.resume());
+      e.addEventListener("touchend", () => swiper.autoplay.resume());
+    });
   }
   setSwiper();
 
