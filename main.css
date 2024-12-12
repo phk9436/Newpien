@@ -1086,7 +1086,6 @@ footer .logoWrapper li:nth-child(2) img {
 
   .section01 .txtWrapper div:not(:nth-child(2)) {
     height: auto;
-    margin-top: calc(14 * var(--vh));
   }
 
   .section01 .txtWrapper p.txtmain {
@@ -1095,6 +1094,7 @@ footer .logoWrapper li:nth-child(2) img {
 
   .section01 .txtWrapper div:nth-child(1) {
     padding-bottom: 44px;
+    margin-top: calc(14 * var(--vh));
   }
 
   .section01 .txtWrapper div:nth-child(2) img {
@@ -1132,9 +1132,11 @@ footer .logoWrapper li:nth-child(2) img {
     margin-top: 3.2vw;
   }
 
+  
   .kneeItem {
     margin-top: 12vw;
-    width: 40%;
+    width: 60vw;
+    height: calc(60vw * (536/714));
   }
 
   .kneeOff {
@@ -1164,7 +1166,7 @@ footer .logoWrapper li:nth-child(2) img {
 
   .section03 {
     padding-top: 20vw;
-    padding-bottom: 20vw;
+    padding-bottom: 10vw;
   }
 
   .section03 :is(.items, .itemWrapper) {
@@ -1216,7 +1218,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .section04 {
-    padding: 0;
+    padding-top: 10vw;
   }
 
   .swiper-dots {
@@ -1438,4 +1440,23 @@ footer .logoWrapper li:nth-child(2) img {
     width: 2.4vw;
     left: 2.4vw;
   }
+}
+
+@media screen and (max-width: 450px) {
+  .section01 .bg {
+    width: 150vw;
+  }
+
+  .section01 .txtWrapper div:nth-child(1) {
+    padding-bottom: 8vw;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .section02 {
+    padding: 20vw 0 10vw;
+  }
+
 }

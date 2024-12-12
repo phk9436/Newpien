@@ -8,12 +8,11 @@ window.addEventListener("load", () => {
   const sect2Bottom = document.querySelector(".section02").getBoundingClientRect().bottom + window.scrollY;
 
   const isScrollOver = () => {
-    const { scrollY } = window;
-    if (scrollY + window.innerHeight > sect2Bottom) {
-      return (scrollY + window.innerHeight) - sect2Bottom; // 차이값 반환
-    } else {
-      return 0; // 아랫점에 도달하지 않았으면 0 반환
+    const { scrollY, innerHeight } = window;
+    if (scrollY + innerHeight > sect2Bottom) {
+      return (scrollY + innerHeight) - sect2Bottom; // 차이값 반환
     }
+    return 0; // 아랫점에 도달하지 않았으면 0 반환
   }
 
   const resizeKnee = () => {
@@ -28,7 +27,10 @@ window.addEventListener("load", () => {
       oldW = (vw / 100) * 60;
       ratio = 714 / 536;
       oldH = oldW * (536 / 714);
-      maxW = vw - 80;
+      maxW = vw - 100;
+    }
+    if (vw <= 450) {
+      maxW = vw - 50;
     }
     const knee = document.querySelector(".kneeItem");
     const newH = oldH + isScrollOver();
@@ -55,7 +57,7 @@ window.addEventListener("load", () => {
   }
   resizeKnee();
 
-  const scrollCheck = (el, gap = 0) => {
+  const scrollCheck = (el) => {
     const rect = el.getBoundingClientRect();
     const windowHeight = window.innerHeight;
     const midpoint = rect.top + (rect.height * 2) / 3;
@@ -145,7 +147,6 @@ window.addEventListener("load", () => {
     if (i === 0) {
       sectPosition = 0;
     }
-    if (i === 2) sectPosition += 100;
     window.scrollTo({
       top: sectPosition,
       behavior: "smooth"
