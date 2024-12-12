@@ -1480,7 +1480,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .section01::before {
-    background-image: url("./images/mainImage_mo.png");
+    background-image: url("https://dhnp.speedgabia.com/newpien/mainImage_mo.png");
   }
 
   .section01 .txtWrapper div:nth-child(1) {
@@ -1771,7 +1771,7 @@ footer .logoWrapper li:nth-child(2) img {
   .faqPopBox .close {
     width: 4vw;
     aspect-ratio: 1;
-    background: url("./images/close.png") no-repeat center/cover;
+    background: url("https://dhnp.speedgabia.com/newpien/close.png") no-repeat center/cover;
     position: absolute;
     top: 6vw;
     right: 6vw;
