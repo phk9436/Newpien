@@ -2,11 +2,13 @@ window.addEventListener("load", () => {
 
   const vh = window.innerHeight;
   const vw = window.innerWidth;
+
+  //메인섹션
   document.querySelector(".section01 .txtContainer").classList.add("on");
   document.querySelectorAll(".section01 .mainItem").forEach((e) => e.classList.add("on"));
 
+  //무릎 섹션
   const sect2Bottom = document.querySelector(".section02").getBoundingClientRect().bottom + window.scrollY;
-
   const isScrollOver = () => {
     const { scrollY, innerHeight } = window;
     if (scrollY + innerHeight > sect2Bottom) {
@@ -14,7 +16,6 @@ window.addEventListener("load", () => {
     }
     return 0; // 아랫점에 도달하지 않았으면 0 반환
   }
-
   const resizeKnee = () => {
     let oldW, oldH, ratio, maxW;
     if (vw > 1100) {
@@ -55,8 +56,8 @@ window.addEventListener("load", () => {
       document.querySelector(".sectionInter").style.paddingTop = `${(maxW / ratio - newH)}px`;
     }
   }
-  resizeKnee();
 
+  //스크롤체크
   const scrollCheck = (el) => {
     const rect = el.getBoundingClientRect();
     const windowHeight = window.innerHeight;
@@ -64,6 +65,7 @@ window.addEventListener("load", () => {
     return midpoint < windowHeight;
   }
 
+  //스와이퍼 섹션
   const swiperDots = document.querySelectorAll(".swiper-dots li");
   const swiperSetting = {
     slidesPerView: 1,
@@ -84,16 +86,11 @@ window.addEventListener("load", () => {
       }
     },
     scrollbar: { el: ".swiper-scroll" },
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
   }
-
   const setSwiper = () => {
-
-    const swiper = new Swiper(".swiper", {
-      ...swiperSetting,
-      effect: 'fade',
-      fadeEffect: { crossFade: true },
-    });
-
+    const swiper = new Swiper(".swiper", swiperSetting);
     swiperDots.forEach((e, i) => e.addEventListener("click", () => swiper.slideToLoop(i)));
     const swiperTexts = document.querySelectorAll(".slideContent p");
     swiperTexts.forEach((e) => {
@@ -105,6 +102,7 @@ window.addEventListener("load", () => {
   }
   setSwiper();
 
+  //faq 섹션
   let isCircleActive = false;
   const circleFunc = () => {
     if (isCircleActive) return;
@@ -115,20 +113,38 @@ window.addEventListener("load", () => {
   };
   const circleWrapper = document.querySelector(".circleWrapper");
   const circle = document.querySelectorAll(".circleCont");
+  const poplayer = document.querySelector(".faqPoplayer");
   circle.forEach((e) => {
-    e.addEventListener("mouseover", () => {
-      circleWrapper.style.animationPlayState = 'paused';
-      circle.forEach((e) => e.querySelector(".circle").style.animationPlayState = 'paused');
-    });
-    e.addEventListener("mouseout", () => {
-      circleWrapper.style.animationPlayState = 'running';
-      circle.forEach((e) => e.querySelector(".circle").style.animationPlayState = 'running');
+    if (vw >= 451) {
+      e.addEventListener("mouseover", () => {
+        circleWrapper.style.animationPlayState = 'paused';
+        circle.forEach((e) => e.querySelector(".circle").style.animationPlayState = 'paused');
+      });
+      e.addEventListener("mouseout", () => {
+        circleWrapper.style.animationPlayState = 'running';
+        circle.forEach((e) => e.querySelector(".circle").style.animationPlayState = 'running');
+      });
+      return;
+    }
+    e.addEventListener("click", () => {
+      poplayer.style.display = "flex";
+      setTimeout(() => poplayer.classList.add("on"), 0);
+      const faqText = e.querySelector(".circle").innerHTML;
+      poplayer.querySelector(".faqPopText").innerHTML = faqText;
     });
   });
+  const closeLayer = () => {
+    poplayer.classList.remove("on");
+    setTimeout(() => poplayer.style.display = "none", 500);
+  }
+  poplayer.querySelector(".bg").addEventListener("click", closeLayer);
+  poplayer.querySelector(".close").addEventListener("click", closeLayer);
 
+  //푸터 섹션
   const family = document.querySelector(".family");
   family.querySelector("li").addEventListener("click", () => family.classList.toggle("on"));
 
+  //네비게이션
   const navSect = document.querySelectorAll(".navigate");
   const navBtn = document.querySelectorAll(".navGray li");
   const navFunc = () => {
@@ -140,7 +156,6 @@ window.addEventListener("load", () => {
       }
     });
   };
-
   const navigateSect = (evt, i) => {
     evt.preventDefault();
     let sectPosition = document.querySelectorAll(".navigate")[i].getBoundingClientRect().top + window.scrollY + 10;
@@ -164,13 +179,10 @@ window.addEventListener("load", () => {
     });
   });
 
+  //섹션 함수
   const sectFunc = () => {
     //섹션1 이벤트
-    // const itemWrapper = document.querySelector(".section01 .itemWrapper");
-    // const txtContainer = document.querySelector(".section01 .txtContainer");
     const isScroll = (window.scrollY / (vh / 2)) > 0.8;
-    // txtContainer.style.opacity = isScroll ? 0 : 1;
-    // itemWrapper.style.opacity = isScroll ? 0 : 1;
     !isScroll
       ? (
         document.querySelector(".navGray").classList.add("off"),
