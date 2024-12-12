@@ -1449,6 +1449,25 @@ footer .logoWrapper li:nth-child(2) img {
 }
 
 @media screen and (max-width: 450px) {
+
+  .nomobile {
+    display: none;
+  }
+
+  h3 {
+    font-size: 3.8vw;
+  }
+
+  h2 {
+    font-size: 10vw;
+  }
+
+  .section02 p.desc {
+    font-size: 3.6vw;
+    letter-spacing: -0.08em;
+    margin-top: 4vw;
+  }
+
   .section01 .bg {
     width: 150vw;
   }
@@ -1475,6 +1494,10 @@ footer .logoWrapper li:nth-child(2) img {
 
   .section01 .txtSub {
     font-size: 3vw;
+  }
+
+  .sectionInter .txtInter {
+    font-size: 5vw;
   }
 
   .container {
@@ -1559,6 +1582,67 @@ footer .logoWrapper li:nth-child(2) img {
   .section03 .info span {
     font-size: 2vw;
     line-height: 1;
+  }
+
+  .swiper-dots {
+    display: none;
+  }
+
+  .slideArea {
+    margin-top: 10vw;
+  }
+
+  .slideWrapper {
+    width: calc(100vw - 58px);
+    aspect-ratio: 280/340;
+  }
+
+  .slideTitle h4 {
+    font-size: 5.8vw;
+  }
+
+  .slideTitle h4 em {
+    font-size: 6.5vw;
+  }
+
+  .swiper-slide {
+    padding: 5.2vw;
+    padding-bottom: 12vw;
+  }
+
+  .slideContent p {
+    font-size: 3.2vw;
+    line-height: 1.6;
+  }
+
+  .slideContent span {
+    font-size: 2.6vw;
+  }
+
+  .swiper-scroll {
+    width: calc(100% - 10.4vw - 20vw);
+    height: 3px;
+    left: 5.2vw;
+    bottom: calc(6vw - 1px);
+  }
+
+  .swiperArrowPrev, .swiperArrowNext {
+    bottom: 3vw;
+    width: 4vw;
+    height: 6vw;
+  }
+
+  .swiperArrowNext {
+    right: 5.2vw;
+  }
+
+  .swiperArrowPrev {
+    right: 15.2vw;
+  }
+
+  .sectionPrd .container {
+    padding: 0;
+    padding-top: 10vw;
   }
 
   nav ul {
