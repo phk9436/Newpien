@@ -136,7 +136,7 @@ window.addEventListener("load", () => {
   const closeLayer = () => {
     poplayer.classList.remove("on");
     setTimeout(() => poplayer.style.display = "none", 500);
-  }
+  };
   poplayer.querySelector(".bg").addEventListener("click", closeLayer);
   poplayer.querySelector(".close").addEventListener("click", closeLayer);
 
