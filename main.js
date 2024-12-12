@@ -31,7 +31,7 @@ window.addEventListener("load", () => {
       maxW = vw - 100;
     }
     if (vw <= 450) {
-      maxW = vw - 58;
+      maxW = vw - 50;
     }
     const knee = document.querySelector(".kneeItem");
     const newH = oldH + isScrollOver();

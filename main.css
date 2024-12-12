@@ -1508,7 +1508,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .container {
-    padding: 0 24px;
+    padding: 0 20px;
   }
 
   .section02 {
@@ -1534,28 +1534,28 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .section03 :is(.items, .itemWrapper) {
-    gap: 3vw;
+    gap: 2vw;
   }
 
   .section03 .item {
     aspect-ratio: 13/18;
-    padding: 3vw;
+    padding: 3vw 2.5vw;
     border-radius: 3vw;
   }
 
   .section03 .itemWrapper:nth-child(2) {
-    margin-top: calc((((94vw - 48px) / 3) * (16 / 13)) / 2);
+    margin-top: calc((((96vw - 48px) / 3) * (18 / 13)) / 2);
   }
 
   .section03 .itemWrapper:nth-child(4) {
-    margin-top: calc(((((94vw - 48px) / 3) * (16 / 13)) / 2) * -1);
+    margin-top: calc(((((96vw - 48px) / 3) * (18 / 13)) / 2) * -1);
   }
 
   .section03 .itemWrapper:nth-child(4)>div:nth-child(2) {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: calc((94vw - 48px) / 3);
+    width: calc((96vw - 48px) / 3);
   }
 
   .section03 .itemWrapper:where(:nth-child(1), :nth-child(3)) {
@@ -1567,11 +1567,12 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .section03 .title {
-    font-size: 3.5vw;
+    font-size: 3.8vw;
   }
 
   .section03 .info {
-    font-size: 2.8vw;
+    font-size: 3vw;
+    letter-spacing: -0.08em;
   }
 
   .section03 .info.line {
@@ -1579,7 +1580,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .section03 .info em {
-    font-size: 2.9vw;
+    font-size: 3vw;
   }
 
   .section03 .info em:nth-of-type(2) {
@@ -1587,12 +1588,22 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .section03 .info span {
-    font-size: 2.1vw;
+    font-size: 2.2vw;
     line-height: 1;
   }
 
   .section03 .info.nowrap {
     white-space: wrap;
+  }
+
+  .dot {
+    width: 2vw;
+    top: calc(100% - 6.5vw);
+    right: 2.5vw;
+  }
+
+  .section03 .item:hover .dot {
+    top: 3.5vw;
   }
 
   .swiper-dots {
@@ -1714,6 +1725,12 @@ footer .logoWrapper li:nth-child(2) img {
   .faqWrapper.on .circleCont:nth-child(4) {
     transform: translateX(-50%);
     bottom: 0;
+  }
+
+  .faqWrapper .circle::before {
+    width: 2.2vw;
+    left: calc(50% - 1.1vw);
+    top: 12%;
   }
 
   .faqDesc {
