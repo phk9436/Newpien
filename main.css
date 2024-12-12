@@ -1132,7 +1132,7 @@ footer .logoWrapper li:nth-child(2) img {
     margin-top: 3.2vw;
   }
 
-  
+
   .kneeItem {
     margin-top: 12vw;
     width: 60vw;
@@ -1447,8 +1447,28 @@ footer .logoWrapper li:nth-child(2) img {
     width: 150vw;
   }
 
+  .section01::before {
+    background-image: url("./images/mainImage_mo.png");
+  }
+
   .section01 .txtWrapper div:nth-child(1) {
-    padding-bottom: 8vw;
+    padding-bottom: 6vw;
+  }
+
+  .section01 .txtWrapper p.txtmain {
+    font-size: 4.8vw;
+  }
+
+  .section01 .txtWrapper div:nth-child(2) img {
+    width: 78vw;
+  }
+
+  .section01 .txtWrapper div:nth-child(3) {
+    padding-bottom: calc(5 * var(--vh));
+  }
+
+  .section01 .txtSub {
+    font-size: 3vw;
   }
 
   .container {
@@ -1457,6 +1477,20 @@ footer .logoWrapper li:nth-child(2) img {
 
   .section02 {
     padding: 20vw 0 10vw;
+  }
+
+  @media screen and (min-height: 700px) {
+    .section01::before {
+      top: calc(2 * var(--vh));
+    }
+
+    .section01 .txtWrapper {
+      width: 100%;
+    }
+
+    .section01 .txtWrapper div:nth-child(1) {
+      margin-top: calc(16 * var(--vh));
+    }
   }
 
 }
