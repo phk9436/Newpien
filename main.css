@@ -1042,6 +1042,12 @@ footer .logoWrapper li:nth-child(2) img {
   }
 }
 
+@media screen and (min-width: 451px) {
+  .mo {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 1100px) {
 
   .pc {
@@ -1472,7 +1478,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
 
   .section02 {
@@ -1491,6 +1497,102 @@ footer .logoWrapper li:nth-child(2) img {
     .section01 .txtWrapper div:nth-child(1) {
       margin-top: calc(16 * var(--vh));
     }
+  }
+
+  .section03 .items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section03 :is(.items, .itemWrapper) {
+    gap: 3vw;
+  }
+
+  .section03 .item {
+    aspect-ratio: 130/160;
+    padding: 3vw;
+    border-radius: 3vw;
+  }
+
+  .section03 .itemWrapper:nth-child(2) {
+    margin-top: calc(((((100vw - 48px) / 3) - (6vw / 3)) * (160 / 130)) / 2);
+  }
+
+  .section03 .itemWrapper:nth-child(4) {
+    margin-top: calc((((((100vw - 48px) / 3) - (6vw / 3)) * (160 / 130)) / 2) * -1);
+  }
+
+  .section03 .itemWrapper:nth-child(4)>div:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(((100vw - 48px) / 3) - (6vw / 3));
+  }
+
+  .section03 .itemWrapper:where(:nth-child(1), :nth-child(3)) {
+    margin-top: 0;
+  }
+
+  .section03 .icon {
+    font-size: 4vw;
+  }
+
+  .section03 .title {
+    font-size: 3.4vw;
+  }
+
+  .section03 .info {
+    font-size: 2.4vw;
+  }
+
+  .section03 .info.line {
+    line-height: 1.2;
+  }
+
+  .section03 .info em {
+    font-size: 2.8vw;
+  }
+
+  .section03 .info em:nth-of-type(2) {
+    margin-top: 2px;
+  }
+
+  .section03 .info span {
+    font-size: 2vw;
+    line-height: 1;
+  }
+
+  nav ul {
+    gap: 3.8vw;
+  }
+
+  .section03 .info.nowrap {
+    white-space: wrap;
+  }
+
+  nav li:hover a::after,
+  nav li.on a::after,
+  nav .navMain li:nth-child(1) a::after {
+    width: 2.6vw;
+  }
+
+  nav {
+    right: 10px;
+  }
+
+  nav li {
+    height: 2.6vw;
+  }
+
+  nav li a::after {
+    width: 1.4vw;
+  }
+
+  nav p {
+    display: none;
+  }
+
+  .scrollbar {
+    width: 4px;
   }
 
 }
