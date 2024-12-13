@@ -103,8 +103,8 @@ window.addEventListener("load", () => {
     swiperTexts.forEach((e) => {
       e.addEventListener("mouseover", () => swiper.autoplay.pause());
       e.addEventListener("touchstart", () => swiper.autoplay.pause());
-      e.addEventListener("mouseout", () => swiper.autoplay.resume());
-      e.addEventListener("touchend", () => swiper.autoplay.resume());
+      e.addEventListener("mouseout", () => isplaying && swiper.autoplay.resume());
+      e.addEventListener("touchend", () => isplaying && swiper.autoplay.resume());
     });
     document.querySelector(".pauseBtn").addEventListener("click", (e) => {
       e.target.classList.toggle("on");
