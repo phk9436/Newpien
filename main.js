@@ -75,7 +75,7 @@ window.addEventListener("load", () => {
   const swiperDots = document.querySelectorAll(".swiper-dots li");
   const swiperSetting = {
     slidesPerView: 1,
-    autoplay: true,
+    //autoplay: true,
     loop: true,
     loopAdditionalSlides: 1,
     observer: true,
