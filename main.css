@@ -1544,18 +1544,18 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .section03 .itemWrapper:nth-child(2) {
-    margin-top: calc((((96vw - 48px) / 3) * (18 / 13)) / 2);
+    margin-top: calc((((96vw - 40px) / 3) * (18 / 13)) / 2);
   }
 
   .section03 .itemWrapper:nth-child(4) {
-    margin-top: calc(((((96vw - 48px) / 3) * (18 / 13)) / 2) * -1);
+    margin-top: calc(((((96vw - 40px) / 3) * (18 / 13)) / 2) * -1);
   }
 
   .section03 .itemWrapper:nth-child(4)>div:nth-child(2) {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: calc((96vw - 48px) / 3);
+    width: calc((96vw - 40px) / 3);
   }
 
   .section03 .itemWrapper:where(:nth-child(1), :nth-child(3)) {
