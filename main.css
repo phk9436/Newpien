@@ -1197,7 +1197,8 @@ footer .logoWrapper li:nth-child(2) img {
     font-size: 15px;
   }
 
-  .swiperArrowPrev, .swiperArrowNext {
+  .swiperArrowPrev,
+  .swiperArrowNext {
     width: 18px;
     height: 28px;
     bottom: 100px;
@@ -1218,6 +1219,84 @@ footer .logoWrapper li:nth-child(2) img {
 
   .sectionPrd .container {
     padding: 0 200px;
+  }
+
+  .faqWrapper {
+    width: 720px;
+  }
+
+  .faqWrapper .circleCont {
+    width: 180px;
+  }
+
+  .faqWrapper.active .circleCont:hover {
+    width: 300px;
+    border-radius: 20px;
+  }
+
+  .faqWrapper .circle .title {
+    font-size: 16px;
+  }
+
+  .faqWrapper.active .circleCont:hover .circle .title {
+    font-size: 22px;
+  }
+
+  .faqWrapper .circle .desc {
+    font-size: 16px;
+  }
+
+  .faqWrapper.active .circleCont:hover .circle::before {
+    width: 18px;
+    left: 26px;
+  }
+
+  .faqDesc {
+    font-size: 14px;
+    margin-top: 120px;
+  }
+
+  .section05 {
+    padding-bottom: 80px;
+  }
+
+  .section06 {
+    padding: 80px 0 200px;
+  }
+
+  footer .logoWrapper li:nth-child(1) {
+    padding-right: 30px;
+  }
+
+  footer .logoWrapper li:nth-child(1) img {
+    width: 220px;
+  }
+
+  footer .logoWrapper li:nth-child(2) {
+    padding-left: 30px;
+  }
+
+  footer .logoWrapper li:nth-child(2) img {
+    width: 160px;
+  }
+
+  .section06 .footerInfo {
+    font-size: 14px;
+    margin: 20px 0 50px;
+  }
+
+  ul.family {
+    height: 44px;
+  }
+
+  ul.family.on {
+    height: 132px;
+  }
+
+  ul.family li {
+    height: 44px;
+    font-size: 14px;
+    line-height: 44px;
   }
 }
 
