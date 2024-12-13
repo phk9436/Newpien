@@ -666,8 +666,8 @@ h2 {
 
 @media screen and (min-width: 451px) {
   .faqWrapper.active .circleCont:hover {
-    width: 410px;
-    border-radius: 60px;
+    width: 360px;
+    border-radius: 40px;
     transition: width .5s, transform .4s;
   }
 
@@ -703,11 +703,11 @@ h2 {
 
   .faqWrapper.active .circleCont:hover .circle::before {
     left: 30px;
-    width: 24px;
+    width: 18px;
   }
 
   .faqWrapper.active .circleCont:hover .circle .title {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .faqWrapper.active .circleCont:hover .circle .desc {
@@ -800,7 +800,7 @@ h2 {
 }
 
 .faqWrapper .circle .desc {
-  font-size: 20px;
+  font-size: 18px;
   padding-top: 0;
   transition: .5s;
   overflow: hidden;
@@ -1684,7 +1684,7 @@ footer .logoWrapper li:nth-child(2) img {
 
   .faqWrapper.active .circleCont:hover {
     width: 40vw;
-    max-width: 410px;
+    max-width: 360px;
   }
 
   .faqWrapper.acitve .circleCont:hover .circle {
