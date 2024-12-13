@@ -95,6 +95,7 @@ window.addEventListener("load", () => {
     effect: 'fade',
     fadeEffect: { crossFade: true },
   }
+  let isplaying = true;
   const setSwiper = () => {
     const swiper = new Swiper(".swiper", swiperSetting);
     swiperDots.forEach((e, i) => e.addEventListener("click", () => swiper.slideToLoop(i)));
@@ -104,6 +105,11 @@ window.addEventListener("load", () => {
       e.addEventListener("touchstart", () => swiper.autoplay.pause());
       e.addEventListener("mouseout", () => swiper.autoplay.resume());
       e.addEventListener("touchend", () => swiper.autoplay.resume());
+    });
+    document.querySelector(".pauseBtn").addEventListener("click", (e) => {
+      e.target.classList.toggle("on");
+      isplaying ? swiper.autoplay.pause() : swiper.autoplay.resume();
+      isplaying = !isplaying;
     });
   }
   setSwiper();

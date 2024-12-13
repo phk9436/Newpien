@@ -542,21 +542,42 @@ h2 {
 .swiperArrowPrev,
 .swiperArrowNext {
   width: 23px;
-  height: 36px;
+  aspect-ratio: 23/36;
   bottom: 125px;
-  background: url("https://dhnp.speedgabia.com/newpien/slidearrow.png") no-repeat center/contain;
+  background: url("https://dhnp.speedgabia.com/newpien/slidearrow.png") no-repeat center/80%;
   position: absolute;
-  z-index: 9;
+  z-index: 8;
   cursor: pointer;
 }
 
 .swiperArrowPrev {
-  right: 860px;
+  right: 878px;
 }
 
 .swiperArrowNext {
   right: 790px;
   transform: rotate(180deg);
+}
+
+.pauseBtn {
+  width: 36px;
+  aspect-ratio: 1;
+  background: rgba(0, 0, 0, 0.1) url("./images/pause.png") no-repeat center/60%;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 125px;
+  right: 828px;
+  z-index: 8;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.pauseBtn.on {
+  background-image: url("./images/resume2.png");
+}
+
+.pauseBtn:hover {
+  background-color: #13AE67;
 }
 
 .swiper-dots {
@@ -1201,7 +1222,6 @@ footer .logoWrapper li:nth-child(2) img {
   .swiperArrowPrev,
   .swiperArrowNext {
     width: 18px;
-    height: 28px;
     bottom: 100px;
   }
 
@@ -1913,7 +1933,6 @@ footer .logoWrapper li:nth-child(2) img {
   .swiperArrowNext {
     bottom: 3vw;
     width: 4vw;
-    height: 6vw;
   }
 
   .swiperArrowNext {
