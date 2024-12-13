@@ -1593,7 +1593,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .swiper-scroll {
-    width: calc(100% - 22vw - 46px);
+    width: calc(100% - 12vw - 133px);
     right: initial;
     left: 6vw;
     z-index: 3;
@@ -1609,8 +1609,14 @@ footer .logoWrapper li:nth-child(2) img {
     right: 6vw;
   }
 
+  .pauseBtn {
+    width: 32px;
+    right: calc(6vw + 36px);
+    bottom: calc(7vw - 16px);
+  }
+
   .swiperArrowPrev {
-    right: calc(10vw + 23px);
+    right: calc(6vw + 81px);
   }
 
   .faqDesc {
@@ -1929,7 +1935,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .swiper-scroll {
-    width: calc(100% - 10.4vw - 20vw);
+    width: calc(100% - 10.4vw - 24.2vw);
     height: 3px;
     left: 5.2vw;
     bottom: calc(6vw - 1px);
@@ -1945,8 +1951,13 @@ footer .logoWrapper li:nth-child(2) img {
     right: 5.2vw;
   }
 
+  .pauseBtn {
+    width: 6vw;
+    right: 12.2vw;
+  }
+
   .swiperArrowPrev {
-    right: 15.2vw;
+    right: 21.2vw
   }
 
   .sectionPrd .container {
