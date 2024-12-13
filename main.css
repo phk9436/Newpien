@@ -1041,6 +1041,102 @@ footer .logoWrapper li:nth-child(2) img {
   width: 180px;
 }
 
+@media screen and (max-width: 1440px) and (min-width: 1101px) {
+  .section01 .itemWrapper {
+    right: 10%;
+  }
+
+  .section01 .txtWrapper p.txtmain {
+    font-size: 26px;
+  }
+
+  .section01 .txtWrapper div:nth-child(1) {
+    padding-bottom: 70px;
+  }
+
+  .section01 .txtWrapper div:nth-child(2) img {
+    width: 500px;
+  }
+
+  .section01 .txtSub {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 58px;
+  }
+
+  .section02 p.desc {
+    font-size: 20px;
+  }
+
+  .kneeItem {
+    width: 710px;
+    height: 388px;
+    margin-top: 80px;
+  }
+
+  .itemcase {
+    right: -90px;
+    bottom: -140px;
+  }
+
+  .itemcase img {
+    width: 640px;
+  }
+
+  .sectionInter .container {
+    padding-top: 280px;
+  }
+
+  .sectionInter .txtInter {
+    font-size: 34px;
+  }
+
+  .section03 .item {
+    border-radius: 20px;
+    padding: 24px 30px 30px;
+  }
+
+  .section03 .icon {
+    font-size: 32px;
+  }
+
+  .section03 .title {
+    font-size: 24px;
+  }
+
+  .section03 .info {
+    font-size: 16px;
+  }
+
+  .section03 .item:hover .info {
+    padding-top: 14px;
+  }
+
+  .section03 .info em {
+    font-size: 18px;
+  }
+
+  .section03 .info span {
+    font-size: 12px;
+  }
+
+  .dot {
+    width: 14px;
+    right: 30px;
+    top: calc(100% - 54px);
+  }
+
+  .section03 .item:hover .dot {
+    top: 34px;
+  }
+}
+
 @media screen and (min-width: 1101px) {
   .pad {
     display: none !important;

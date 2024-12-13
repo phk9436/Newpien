@@ -18,11 +18,17 @@ window.addEventListener("load", () => {
   }
   const resizeKnee = () => {
     let oldW, oldH, ratio, maxW;
-    if (vw > 1100) {
+    if (vw > 1440) {
       oldW = 860;
       oldH = 470;
       ratio = 860 / 470;
       maxW = 1200;
+    }
+    if (vw > 1100 && vw <= 1440) {
+      oldW = 710;
+      oldH = 388;
+      ratio = 710 / 388;
+      maxW = 1000;
     }
     if (vw <= 1100) {
       oldW = (vw / 100) * 60;
