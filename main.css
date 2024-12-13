@@ -1229,8 +1229,14 @@ footer .logoWrapper li:nth-child(2) img {
     left: 516px;
   }
 
+  .pauseBtn {
+    width: 28px;
+    bottom: 100px;
+    left: 474px;
+  }
+
   .swiperArrowPrev {
-    left: 458px;
+    left: 442px;
   }
 
   .swiper-scroll {
