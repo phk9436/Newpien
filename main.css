@@ -240,14 +240,14 @@ h2 {
 
 .itemcase {
   position: absolute;
-  right: -100px;
-  bottom: -218px;
+  right: -90px;
+  bottom: -158px;
   opacity: 0;
   transition: .5s;
 }
 
 .itemcase img {
-  width: 720px;
+  width: 700px;
 }
 
 .kneeItem.on .itemcase {
@@ -256,7 +256,7 @@ h2 {
 
 .section03 {
   padding-top: 200px;
-  padding-bottom: 260px;
+  padding-bottom: 200px;
 }
 
 .section03 .items {
@@ -310,9 +310,9 @@ h2 {
 .section03 .item {
   width: 100%;
   background-color: #fbfbfb;
-  border-radius: 40px;
+  border-radius: 30px;
   aspect-ratio: 345/313;
-  padding: 32px 40px 40px;
+  padding: 30px 34px 34px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -322,7 +322,7 @@ h2 {
 }
 
 .section03 .icon {
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 1;
   transition: 0.5s;
@@ -339,7 +339,7 @@ h2 {
 }
 
 .section03 .title {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 500;
 }
 
@@ -348,7 +348,7 @@ h2 {
 }
 
 .section03 .info {
-  font-size: 20px;
+  font-size: 18px;
   padding-top: 0px;
   letter-spacing: -0.05em;
   max-height: 0;
@@ -358,7 +358,7 @@ h2 {
 }
 
 .section03 .info em {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   display: inline-block;
 }
@@ -368,7 +368,7 @@ h2 {
 }
 
 .section03 .info span {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .dot {
@@ -376,8 +376,8 @@ h2 {
   aspect-ratio: 1;
   background-color: #13AE67;
   position: absolute;
-  top: calc(100% - 70px);
-  right: 55px;
+  top: calc(100% - 62px);
+  right: 34px;
   border-radius: 50%;
   transition: 0.5s;
 }
@@ -403,7 +403,7 @@ h2 {
 }
 
 .section03 .item:hover .dot {
-  top: 45px;
+  top: 42px;
 }
 
 .sectionInter {
@@ -411,11 +411,11 @@ h2 {
 }
 
 .sectionInter .container {
-  padding-top: 400px;
+  padding-top: 340px;
 }
 
 .sectionInter .txtInter {
-  font-size: 45px;
+  font-size: 42px;
 }
 
 .sectionInter .txtInter em {
@@ -482,25 +482,26 @@ h2 {
   width: 100%;
   height: 100%;
   display: flex;
-  gap: 100px;
+  gap: 80px;
   padding: 90px 0;
 }
 
 .slideTitle h4 {
   margin-top: 20px;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 700;
   white-space: nowrap;
   text-align: right;
 }
 
 .slideTitle h4 em {
-  font-size: 64px;
+  font-size: 60px;
   color: #13AE67;
 }
 
 .slideContent {
   overflow-y: auto;
+  width: calc(100% - 360px);
 }
 
 .slideContent::-webkit-scrollbar {
@@ -530,7 +531,7 @@ h2 {
   border-radius: 2px;
   position: absolute;
   bottom: 141px;
-  right: 920px;
+  right: 940px;
   background-color: #fff;
 }
 
@@ -550,11 +551,11 @@ h2 {
 }
 
 .swiperArrowPrev {
-  right: 840px;
+  right: 860px;
 }
 
 .swiperArrowNext {
-  right: 770px;
+  right: 790px;
   transform: rotate(180deg);
 }
 
@@ -1042,7 +1043,7 @@ footer .logoWrapper li:nth-child(2) img {
 }
 
 .sectionPrd .container {
-  padding: 0 60px;
+  padding: 0 80px;
 }
 
 @media screen and (max-width: 1440px) and (min-width: 1101px) {

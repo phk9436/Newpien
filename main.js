@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
       oldW = 860;
       oldH = 470;
       ratio = 860 / 470;
-      maxW = 1200;
+      maxW = 1100;
     }
     if (vw > 1100 && vw <= 1440) {
       oldW = 710;
