@@ -576,10 +576,6 @@ h2 {
   background-image: url("./images/resume2.png");
 }
 
-.pauseBtn:hover {
-  background-color: #13AE67;
-}
-
 .swiper-dots {
   margin-top: 84px;
   display: flex;
@@ -1330,6 +1326,10 @@ footer .logoWrapper li:nth-child(2) img {
 @media screen and (min-width: 1101px) {
   .pad {
     display: none !important;
+  }
+
+  .pauseBtn:hover {
+    background-color: #13AE67;
   }
 }
 
