@@ -262,7 +262,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "knee_pad.png",
     "knee_on_pad.png",
     "mainImage_mo.png",
-    "prd_mo.jpg"
+    "prd_mo.jpg",
+    "close.png"
   ];
 
   let images = [];
