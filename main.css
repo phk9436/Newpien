@@ -562,7 +562,7 @@ h2 {
 .pauseBtn {
   width: 36px;
   aspect-ratio: 1;
-  background: rgba(0, 0, 0, 0.1) url("./images/pause.png") no-repeat center/60%;
+  background: rgba(0, 0, 0, 0.1) url("https://dhnp.speedgabia.com/newpien/pause.png") no-repeat center/60%;
   border-radius: 50%;
   position: absolute;
   bottom: 125px;
@@ -573,7 +573,7 @@ h2 {
 }
 
 .pauseBtn.on {
-  background-image: url("./images/resume2.png");
+  background-image: url("https://dhnp.speedgabia.com/newpien/resume2.png");
 }
 
 .swiper-dots {
@@ -609,6 +609,10 @@ h2 {
 
 .section04 {
   padding: 100px 0 0;
+}
+
+.sectionPrd {
+  padding: 100px 0 50px;
 }
 
 .sectionPrd img {
@@ -1624,6 +1628,14 @@ footer .logoWrapper li:nth-child(2) img {
     font-size: 2.4vw;
   }
 
+  .sectionPrd {
+    padding: 10vw 0 0;
+  }
+
+  .sectionPrd .container {
+    padding: 0;
+  }
+
   .section05 {
     padding-top: 20vw;
     padding-bottom: 10vw;
@@ -1960,9 +1972,12 @@ footer .logoWrapper li:nth-child(2) img {
     right: 21.2vw
   }
 
+  .sectionPrd {
+    padding-top: 15vw;
+  }
+
   .sectionPrd .container {
     padding: 0;
-    padding-top: 10vw;
   }
 
   .faqWrapper {
