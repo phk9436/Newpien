@@ -1333,7 +1333,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .pauseBtn:hover {
-    background-color: #13AE67;
+    background-color: rgba(178, 178, 178, 0.8);
   }
 }
 
