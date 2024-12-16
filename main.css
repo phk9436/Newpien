@@ -2290,4 +2290,26 @@ footer .logoWrapper li:nth-child(2) img {
     width: 4px;
   }
 
+  .loadingLogo {
+    width: 60px;
+  }
+
+  .loadingWave>div:nth-child(1) {
+    width: 200px;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+  }
+
+  .loadingWave>div:nth-child(2) {
+    width: 160px;
+    top: calc(50% - 80px);
+    left: calc(50% - 80px);
+  }
+
+  .loadingWave>div:nth-child(3) {
+    width: 110px;
+    top: calc(50% - 55px);
+    left: calc(50% - 55px);
+  }
+
 }
