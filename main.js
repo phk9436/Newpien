@@ -1,7 +1,11 @@
 window.addEventListener("load", () => {
 
-  const vh = window.innerHeight;
-  const vw = window.innerWidth;
+  let vw = window.innerWidth;
+
+  //로딩
+  setTimeout(() => document.querySelector(".loading").classList.add("off"), 750);
+  setTimeout(() => document.querySelector(".loading").classList.add("hide"), 1000);
+  setTimeout(() => document.querySelector(".loading").style.display = "none", 1500);
 
   //메인섹션
   document.querySelector(".section01 .txtContainer").classList.add("on");
@@ -193,8 +197,10 @@ window.addEventListener("load", () => {
 
   //섹션 함수
   const sectFunc = () => {
+    vw = window.innerWidth;
+    
     //섹션1 이벤트
-    const isScroll = (window.scrollY / (vh / 2)) > 0.8;
+    const isScroll = (window.scrollY / (window.innerHeight / 2)) > 0.8;
     !isScroll
       ? (
         document.querySelector(".navGray").classList.add("off"),
@@ -216,10 +222,58 @@ window.addEventListener("load", () => {
   };
   sectFunc();
   window.addEventListener("scroll", sectFunc);
+  window.addEventListener("resize", sectFunc);
 
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const vh = window.innerHeight;
-  document.documentElement.style.setProperty("--vh", `${vh * 0.01}px`);
+  document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`);
+  window.addEventListener("resize", () => document.documentElement.style.setProperty("--vh", `${window.innerHeight * 0.01}px`));
+
+  const imagesArr = [
+    "faqBg.png",
+    "footerLogo.png",
+    "footerLogo2.png",
+    "itemcase.png",
+    "mainLogo.png",
+    "pause.png",
+    "resume2.png",
+    "sec2top.png",
+    "siteArrow.png",
+    "slidearrow.png"
+  ];
+  const imagesW = [
+    ...imagesArr,
+    "knee.png",
+    "knee_on.png",
+    "mainImage.png",
+    "prd.png",
+    "slideBg.png"
+  ];
+  const imagesP = [
+    ...imagesArr,
+    "knee_pad.png",
+    "knee_on_pad.png",
+    "mainImage_pad.png",
+    "prd.png"
+  ];
+  const imagesM = [
+    ...imagesArr,
+    "knee_pad.png",
+    "knee_on_pad.png",
+    "mainImage_mo.png",
+    "prd_mo.jpg"
+  ];
+
+  let images = [];
+  const setImages = (img) => {
+    img.forEach((e, i) => {
+      images[i] = new Image();
+      images[i].src = `https://dhnp.speedgabia.com/newpien/${e}`;
+    });
+  };
+  const docWidth = window.innerWidth;
+  docWidth <= 450 && setImages(imagesM);
+  (docWidth > 450 && docWidth <= 1100) && setImages(imagesP);
+  docWidth > 1100 && setImages(imagesW);
 });
