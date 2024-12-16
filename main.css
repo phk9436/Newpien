@@ -1064,7 +1064,7 @@ footer .logoWrapper li:nth-child(2) img {
 }
 
 .sectionPrd .container {
-  padding: 0 80px;
+  padding: 0 100px;
 }
 
 @media screen and (max-width: 1440px) and (min-width: 1101px) {
@@ -1245,7 +1245,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .sectionPrd .container {
-    padding: 0 200px;
+    padding: 0 150px;
   }
 
   .faqWrapper {
@@ -1973,7 +1973,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .sectionPrd {
-    padding-top: 15vw;
+    padding-top: 25vw;
   }
 
   .sectionPrd .container {
