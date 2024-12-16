@@ -1909,6 +1909,10 @@ footer .logoWrapper li:nth-child(2) img {
     font-size: 3vw;
   }
 
+  .sectionInter .container {
+    padding-top: 36vw;
+  }
+
   .sectionInter .txtInter {
     font-size: 5vw;
   }
@@ -1941,6 +1945,11 @@ footer .logoWrapper li:nth-child(2) img {
 
   .section03 :is(.items, .itemWrapper) {
     gap: 2vw;
+  }
+
+  .section03 {
+    padding-top: 34vw;
+    padding-bottom: 36vw;
   }
 
   .section03 .item {
@@ -2074,7 +2083,8 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .sectionPrd {
-    padding-top: 25vw;
+    padding-top: 32vw;
+    padding-bottom: 6vw;
   }
 
   .sectionPrd .container {
@@ -2147,7 +2157,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .faqDesc {
-    margin-top: 165vw;
+    margin-top: 170vw;
     font-size: 3vw;
   }
 
@@ -2226,8 +2236,12 @@ footer .logoWrapper li:nth-child(2) img {
     font-size: 3.8vw;
   }
 
+  .section05 {
+    padding-bottom: 20vw;
+  }
+
   .section06 {
-    padding: 10vw 0 30vw;
+    padding: 10vw 0 34vw;
   }
 
   footer .logoWrapper li:nth-child(1) img {
