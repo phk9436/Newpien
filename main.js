@@ -116,7 +116,7 @@ window.addEventListener("load", () => {
       isplaying = !isplaying;
     });
   }
-  setSwiper();
+  //setSwiper();
 
   //faq 섹션
   let isCircleActive = false;
@@ -134,11 +134,15 @@ window.addEventListener("load", () => {
     if (vw >= 451) {
       e.addEventListener("mouseover", () => {
         circleWrapper.style.animationPlayState = 'paused';
-        circle.forEach((e) => e.querySelector(".circle").style.animationPlayState = 'paused');
+        circle.forEach((e) => {
+          if (e.querySelector(".circle")) e.querySelector(".circle").style.animationPlayState = 'paused'
+        });
       });
       e.addEventListener("mouseout", () => {
         circleWrapper.style.animationPlayState = 'running';
-        circle.forEach((e) => e.querySelector(".circle").style.animationPlayState = 'running');
+        circle.forEach((e) => {
+          if (e.querySelector(".circle")) e.querySelector(".circle").style.animationPlayState = 'running'
+        });
       });
       return;
     }
@@ -198,7 +202,7 @@ window.addEventListener("load", () => {
   //섹션 함수
   const sectFunc = () => {
     vw = window.innerWidth;
-    
+
     //섹션1 이벤트
     const isScroll = (window.scrollY / (window.innerHeight / 2)) > 0.8;
     !isScroll

@@ -229,7 +229,7 @@ h2 {
 }
 
 .kneeOff {
-  background: url("https://dhnp.speedgabia.com/newpien/knee.png") no-repeat center/100%;
+  background: url("https://dhnp.speedgabia.com/newpien/knee_on.png") no-repeat center/100%;
   opacity: 1;
 }
 
@@ -261,9 +261,10 @@ h2 {
 
 .section03 .items {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  width: 100%;
+  max-width: 1075px;
+  margin: auto;
 }
 
 .section03 .itemCont {
@@ -272,7 +273,7 @@ h2 {
 }
 
 .section03 .itemCont.itemCont1 {
-  transition-delay: 0;
+  transition-delay: 0s;
 }
 
 .section03 .itemCont.itemCont2 {
@@ -1059,6 +1060,14 @@ footer .logoWrapper li:nth-child(2) {
   padding-left: 42px;
 }
 
+footer .logoWrapper li:nth-child(2) p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 6px;
+  line-height: 1;
+  font-weight: 700;
+}
+
 footer .logoWrapper li:nth-child(2) img {
   width: 180px;
 }
@@ -1542,7 +1551,7 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .kneeOff {
-    background-image: url("https://dhnp.speedgabia.com/newpien/knee_pad.png");
+    background-image: url("https://dhnp.speedgabia.com/newpien/knee_on_pad.png");
   }
 
   .kneeOn {
@@ -1573,6 +1582,10 @@ footer .logoWrapper li:nth-child(2) img {
 
   .section03 :is(.items, .itemWrapper) {
     gap: 2vw;
+  }
+
+  .section03 .items {
+    width: calc(100% - 100px);
   }
 
   .section03 .item {
@@ -1765,6 +1778,11 @@ footer .logoWrapper li:nth-child(2) img {
     max-width: 180px;
   }
 
+  footer .logoWrapper li:nth-child(2) p {
+    font-size: 2vw;
+    margin-bottom: 1vw;
+  }
+
   .section06 .footerInfo {
     font-size: 2vw;
     margin: 4vw 0 8vw;
@@ -1939,10 +1957,6 @@ footer .logoWrapper li:nth-child(2) img {
     }
   }
 
-  .section03 .items {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .section03 :is(.items, .itemWrapper) {
     gap: 2vw;
   }
@@ -1952,29 +1966,14 @@ footer .logoWrapper li:nth-child(2) img {
     padding-bottom: 36vw;
   }
 
+  .section03 .items {
+    width: 100%;
+  }
+
   .section03 .item {
     aspect-ratio: 13/18;
     padding: 3vw 2.5vw;
     border-radius: 3vw;
-  }
-
-  .section03 .itemWrapper:nth-child(2) {
-    margin-top: calc((((96vw - 40px) / 3) * (18 / 13)) / 2);
-  }
-
-  .section03 .itemWrapper:nth-child(4) {
-    margin-top: calc(((((96vw - 40px) / 3) * (18 / 13)) / 2) * -1);
-  }
-
-  .section03 .itemWrapper:nth-child(4)>div:nth-child(2) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: calc((96vw - 40px) / 3);
-  }
-
-  .section03 .itemWrapper:where(:nth-child(1), :nth-child(3)) {
-    margin-top: 0;
   }
 
   .section03 .icon {
@@ -2113,42 +2112,34 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   .faqWrapper.on .circleCont:nth-child(1),
-  .faqWrapper.on .circleCont:nth-child(4) {
-    left: calc(50% + 24px);
+  .faqWrapper.on .circleCont:nth-child(3) {
+    display: none;
   }
 
   .faqWrapper .circleCont:nth-child(2) {
     transition-delay: 0.2s;
   }
 
-  .faqWrapper.on .circleCont:nth-child(2) {
-    right: 4%;
-    top: 34%;
+  .faqWrapper.on .circleCont:nth-child(2),
+  .faqWrapper.on .circleCont:nth-child(4) {
+    right: 8%;
   }
 
-  .faqWrapper .circleCont:nth-child(3) {
+  .faqWrapper.on .circleCont:nth-child(2) {
+    top: 30%;
+  }
+
+  .faqWrapper .circleCont:nth-child(4) {
     left: initial;
     right: 50%;
     transition-delay: 0.4s;
     transform: scale(0.5) translate(100%, 100%);
   }
 
-  .faqWrapper.on .circleCont:nth-child(3) {
-    right: 4%;
+  .faqWrapper.on .circleCont:nth-child(4) {
+    left: initial;
     bottom: 32%;
     transform: translateY(50%);
-  }
-
-  .faqWrapper .circleCont:nth-child(4) {
-    top: initial;
-    bottom: 50%;
-    transition-delay: 0.6s;
-    transform: scale(0.5) translate(-100%, 100%);
-  }
-
-  .faqWrapper.on .circleCont:nth-child(4) {
-    transform: translateX(-50%);
-    bottom: 0;
   }
 
   .faqWrapper .circle::before {
@@ -2256,6 +2247,10 @@ footer .logoWrapper li:nth-child(2) img {
 
   footer .logoWrapper li:nth-child(2) img {
     width: 26vw;
+  }
+
+  footer .logoWrapper li:nth-child(2) p {
+    font-size: 2.5vw;
   }
 
   .section06 .footerInfo {
