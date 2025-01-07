@@ -1047,11 +1047,11 @@ footer .logoWrapper li:nth-child(1)::after {
   content: '';
   display: block;
   width: 1px;
-  height: 40px;
+  height: 48px;
   background-color: #fff;
   position: absolute;
   right: 0;
-  top: calc(50% - 22px);
+  top: calc(50% - 28px);
 }
 
 footer .logoWrapper li:nth-child(2) {
@@ -1768,8 +1768,8 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   footer .logoWrapper li:nth-child(1)::after {
-    height: 4vw;
-    top: calc(50% - 2vw);
+    height: 6vw;
+    top: calc(50% - 3vw);
   }
 
   footer .logoWrapper li:nth-child(2) {
@@ -2246,8 +2246,8 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   footer .logoWrapper li:nth-child(1)::after {
-    height: 5vw;
-    top: calc(50% - 3vw);
+    height: 7vw;
+    top: calc(50% - 4vw);
   }
 
   footer .logoWrapper li:nth-child(2) img {
