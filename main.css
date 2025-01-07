@@ -841,6 +841,7 @@ h2 {
   font-size: 16px;
   color: #fff;
   margin: 32px 0 75px;
+  line-height: 2;
 }
 
 .section06 .container {
@@ -1060,13 +1061,13 @@ footer .logoWrapper li:nth-child(2) {
 footer .logoWrapper li:nth-child(2) p {
   font-size: 13px;
   color: #fff;
-  margin-bottom: 6px;
+  margin-bottom: 14px;
   line-height: 1;
   font-weight: 700;
 }
 
 footer .logoWrapper li:nth-child(2) img {
-  width: 180px;
+  width: 210px;
   margin-bottom: 10px;
 }
 
@@ -1776,14 +1777,14 @@ footer .logoWrapper li:nth-child(2) img {
   }
 
   footer .logoWrapper li:nth-child(2) img {
-    width: 22vw;
-    max-width: 180px;
+    width: 26vw;
+    max-width: 210px;
     margin-bottom: 0.5vw;
   }
 
   footer .logoWrapper li:nth-child(2) p {
     font-size: 1.5vw;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
   }
 
   .section06 .footerInfo {
