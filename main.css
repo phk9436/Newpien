@@ -1749,7 +1749,11 @@ footer .logoWrapper li:nth-child(2) img {
 
   .section05 {
     padding-top: 20vw;
-    padding-bottom: 10vw;
+    padding-bottom: 24vw;
+  }
+
+  .faqWrapper {
+    margin-top: 10vw;
   }
 
   footer .logoWrapper li:nth-child(1) {
