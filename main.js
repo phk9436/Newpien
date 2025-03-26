@@ -130,7 +130,7 @@ window.addEventListener("load", () => {
   const circleWrapper = document.querySelector(".circleWrapper");
   const circle = document.querySelectorAll(".circleCont");
   const poplayer = document.querySelector(".faqPoplayer");
-  circle.forEach((e) => {
+  circle.forEach((e, i) => {
     if (vw >= 451) {
       e.addEventListener("mouseover", () => {
         circleWrapper.style.animationPlayState = 'paused';
@@ -146,6 +146,7 @@ window.addEventListener("load", () => {
       });
       return;
     }
+    if(i % 2 === 0) return;
     e.addEventListener("click", () => {
       poplayer.style.display = "flex";
       setTimeout(() => poplayer.classList.add("on"), 0);
